@@ -1,0 +1,33 @@
+/**
+ * 
+ */
+package com.guiautomation.Base;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class TestFactory {
+	
+	
+	BrowserFactory BF=new BrowserFactory();
+	
+	
+	
+	@BeforeMethod
+	public void LaunchApplication() {
+		WebDriver driver=BF.createBrowserInstance("Chrome");
+		DriverFactory.getInstance().setDriver(driver);
+	}
+	
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		
+	}
+}

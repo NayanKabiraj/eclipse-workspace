@@ -1,0 +1,77 @@
+package com.guiautomation.Base;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+/**
+ * @author nkabiraj
+ *
+ */
+/**
+ * @author nkabiraj
+ *
+ */
+public class Action extends Page{
+	
+	
+	public Action(WebDriver driver) {
+		super(driver);
+	}
+
+	
+	/************************************************************************************
+		* METHOD NAME--getPageTitle	 PACKAGE--com.guiautomation.Base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @return
+	
+	*************************************************************************************/
+	@Override
+	public String getPageTitle() {
+		return driver.getTitle();
+	}
+
+	
+	/************************************************************************************
+		* METHOD NAME--getElement	 PACKAGE--com.guiautomation.Base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param locator
+		* @return
+	
+	*************************************************************************************/
+	@Override
+	public WebElement getElement(By locator) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		return driver.findElement(locator);
+	}
+
+	@Override
+	public void waitforElementPresent(By locator) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		
+	}
+
+	@Override
+	public void waitForPageTitle(String title) {
+		wait.until(ExpectedConditions.titleContains(title));
+		
+	}
+
+	
+	@Override
+	public void clickLinkByName(String linkName) {
+		
+		
+	}
+
+	
+
+	
+
+	
+
+}

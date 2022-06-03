@@ -1,0 +1,111 @@
+package com.fcom.pages;
+import com.automation.base.Action;
+import com.automation.base.Page;
+import com.common.utils.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+
+
+public class LoginPage extends Action{
+	
+	private By TXT_username=By.id("username");
+	private By TXT_password=By.id("password");
+	
+	
+
+	
+	
+	
+	public LoginPage(WebDriver driver) {
+		super(driver);
+	}
+
+
+	
+	 
+	
+	/************************************************************************************
+		* METHOD NAME--getTXT_password	 PACKAGE--com.fcom.pages
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @return
+	
+	*************************************************************************************/
+	public By getTXT_password() {
+		return TXT_password;
+	}
+
+
+	
+	/************************************************************************************
+		* METHOD NAME--setTXT_password	 PACKAGE--com.fcom.pages
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param tXT_password
+	
+	*************************************************************************************/
+	public void setTXT_password(By tXT_password) {
+		TXT_password = tXT_password;
+	}
+
+
+	
+	
+	/************************************************************************************
+		* METHOD NAME--getName	 PACKAGE--com.fcom.pages
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @return
+	
+	*************************************************************************************/
+	public WebElement getName() {
+
+		return getElement(TXT_username);
+	}
+	
+
+	
+	/************************************************************************************
+		* METHOD NAME--getPassword	 PACKAGE--com.fcom.pages
+		* PARAMETERS--@return	 RETURNS--WebElement
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+	*************************************************************************************/
+	public WebElement getPassword() {
+		return getElement(TXT_password);
+	}
+	
+
+	
+	
+	/************************************************************************************
+		* METHOD NAME--getLoginPageTitle	 PACKAGE--com.fcom.pages
+		* PARAMETERS--@return	 RETURNS--String
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+	*************************************************************************************/
+	public String getLoginPageTitle() {
+		return getPageTitle();
+	}
+	
+
+	
+	/************************************************************************************
+		* METHOD NAME--doLogin	 PACKAGE--com.fcom.pages
+		* PARAMETERS--@param username
+		* PARAMETERS--@param Pass	 RETURNS--void
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+	*************************************************************************************/
+	public void doLogin(String username,  String Pass) {
+		getName().sendKeys(username);
+		getPassword().sendKeys(Pass);
+	}
+
+}
+ 

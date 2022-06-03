@@ -1,0 +1,173 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",           
+            "properties": {
+              "imageUrl": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/imageUrl",
+                "type": "string",
+                "title": "The Imageurl Schema",
+                "default": "",
+                "examples": [
+                  "https://img3.fastenal.com/productimages/66002.jpg"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isStdItem": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isStdItem",
+                "type": "boolean",
+                "title": "The Isstditem Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "pkgQuantity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/pkgQuantity",
+                "type": "integer",
+                "title": "The Pkgquantity Schema",
+                "default": 0,
+                "examples": [
+                  25
+                ]
+              },
+              "sku": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sku",
+                "type": "string",
+                "title": "The Sku Schema",
+                "default": "",
+                "examples": [
+                  "66045"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "skuDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/skuDescription",
+                "type": "string",
+                "title": "The Skudescription Schema",
+                "default": "",
+                "examples": [
+                  "CLEVIS PIN 5/16 X7/8"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerUsageSuggestions"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",
+      "required": [
+        "parameters",
+        "fields"
+      ],
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",
+          "required": [
+            "query",
+            "customerGroupId"
+          ],
+          "properties": {
+            "query": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/query",
+              "type": "string",
+              "title": "The Query Schema",
+              "default": "",
+              "examples": [
+                "clevis"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "customerGroupId": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerGroupId",
+              "type": "string",
+              "title": "The Customergroupid Schema",
+              "default": "",
+              "examples": [
+                "CSGRP00024"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "fields": {
+          "$id": "#/properties/requestBody/properties/fields",
+          "type": "array",
+          "title": "The Fields Schema",
+          "items": {
+            "$id": "#/properties/requestBody/properties/fields/items",
+            "type": "string",
+            "title": "The Items Schema",
+            "default": "",
+            "examples": [
+              "imageUrl",
+              "isStdItem",
+              "skuDescription",
+              "sku",
+              "pkgQuantity"
+            ],
+            "pattern": "^(.*)$"
+          }
+        }
+      }
+    }
+  }
+}

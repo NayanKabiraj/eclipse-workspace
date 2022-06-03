@@ -1,0 +1,85 @@
+package com.test.TestCases;
+
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.automation.base.BaseTest;
+import com.fcom.pages.LoginPage;
+ 
+
+public class HomePage extends BaseTest {
+	
+	
+	LoginPage lp;
+	@Test()
+	public void verifyLoginPageElements() {
+		lp= page.getInstance(LoginPage.class);
+		Reporter.log("Verify Test");
+		Reporter.log("Verify Test");
+		Assert.assertEquals("asdhgahgjhfd","asdhgahgjhfd");
+		
+	}
+	
+	
+	@Test()
+	public void verifyLoginPageElements2() {
+		lp= page.getInstance(LoginPage.class);
+		Reporter.log("Verify Test");
+		Reporter.log("Verify Test");
+		Assert.assertEquals("asdhgahgjhfd","asdhgahgjhfd");
+	}
+	
+	@Test()
+	public void verifyLoginPageElements3() {
+		lp= page.getInstance(LoginPage.class);
+		Reporter.log("Verify Test");
+		Reporter.log("Verify Test");
+		Assert.assertEquals("asdhgahgjhfd","asdhgahgjhfd");
+	}
+	@Test()
+	public void verifyLoginPageElements4() {
+		lp= page.getInstance(LoginPage.class);
+		Reporter.log("Verify Test");
+		Reporter.log("Verify Test");
+		Assert.assertEquals("asdhgahgjhfd","asdhgahgjhfd");
+	}
+	@Test()
+	public void verifyLoginPageElements6() {
+		lp= page.getInstance(LoginPage.class);
+		Reporter.log("Verify Test");
+		Reporter.log("Verify Test");
+		Assert.assertEquals("asdhgahgjhfd","asdhgahgjhfd");
+	}
+	@Test()
+	public void verifyLoginPageElements7() {
+		lp= page.getInstance(LoginPage.class);
+		Reporter.log("Verify Test");
+		Reporter.log("Verify Test");
+		Assert.assertEquals("asdhgahgjhfd","asdhgahgjhfd");
+	}
+	@Test()
+	public void verifyLoginPageElements8() {
+		lp= page.getInstance(LoginPage.class);
+		Reporter.log("Verify Test");
+		Reporter.log("Verify Test");
+		Assert.assertEquals("asdhgahgjhfd","asdhgahgjhfd");
+	}
+	@Test()
+	public void verifyLoginPageElements9() {
+		lp= page.getInstance(LoginPage.class);
+		Reporter.log("Verify Test");
+		Reporter.log("Verify Test");
+		Assert.assertEquals("asdhgahgjhfd","asdhgahgjhfd");
+	}
+	
+	
+
+}

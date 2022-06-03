@@ -1,0 +1,15 @@
+package com.common.utils;
+
+public class Database {
+	
+	String connString;
+	
+	public Database(String connString) {
+		this.connString=connString;
+	}
+
+	
+	public void connectionString()
+	
+
+}

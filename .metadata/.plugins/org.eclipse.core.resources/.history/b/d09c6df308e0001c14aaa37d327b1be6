@@ -1,0 +1,99 @@
+package com.guiautomation.Base;
+
+import java.io.FileInputStream;
+import java.sql.DriverManager;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+
+import com.relevantcodes.extentreports.ExtentTest;
+import com.github.dockerjava.transport.DockerHttpClient.Request.Method;
+import com.relevantcodes.extentreports.ExtentReports;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseTest {
+	
+	
+
+
+
+	WebDriver driver;
+	WebDriverManager drvManager;
+	public Page page;
+	public Properties prop;
+	FileInputStream ip;
+	static String propLoc=System.getProperty("user.dir")+ "/src/main/java/com/fcom/configuration/";
+	ExtentTest test;
+	ExtentReports er;
+	
+	
+	@BeforeSuite
+	public void before() {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd_MM_yyyy_HHmmss");  
+	    Date date = new Date();
+		er= new ExtentReports(System.getProperty("user.dir")+"/ExtentReport/Report_" +formatter.format(date)+".html", true);
+		
+	}
+	
+	
+	
+	@BeforeMethod
+	@Parameters({"BROWSER","ENVIRONMENT"}) 
+	public void setUpTest(String BROWSER, String ENVIRONMENT, Method method) {
+		prop= new Properties();
+		test=er.startTest(method.getClass().getSimpleName(), method.getClass().getEnclosingMethod().getName());
+		if (BROWSER.equalsIgnoreCase("chrome")) {
+			drvManager.chromedriver().setup();
+			driver= new ChromeDriver();
+		}
+		else if (BROWSER.equalsIgnoreCase("ff")) {
+			drvManager.firefoxdriver().setup();
+			driver= new FirefoxDriver();
+		}
+		else if (BROWSER.equalsIgnoreCase("ie")) {
+			drvManager.iedriver().setup();
+			driver= new InternetExplorerDriver();
+		}
+		else {
+			System.out.println(BROWSER+ " is not a configured browser");
+		}
+		try {
+		if (ENVIRONMENT.equalsIgnoreCase("TST")) {
+				ip=new FileInputStream(propLoc + "TST.properties");
+			}
+		else if(ENVIRONMENT.equalsIgnoreCase("STAGE")) {
+			ip=new FileInputStream( propLoc + "STAGE.properties");
+		}
+		else if(ENVIRONMENT.equalsIgnoreCase("PROD")) {
+			ip=new FileInputStream( propLoc + "PROD.properties");
+		}
+		prop.load(ip);
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		driver.manage().window().maximize();
+		driver.get(prop.getProperty("URL"));
+		page= new Action(driver);
+	}
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
+	}
+	
+	
+	
+	
+
+}

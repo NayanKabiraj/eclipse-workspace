@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package com.guiautomation.Base;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
+import com.aventstack.extentreports.ExtentReports;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class ExtentReportFactory {
+	static ExtentReports extent;
+	public static ExtentReports setupReport() {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd_MM_yyyy_HHmmss");  
+	    Date date = new Date();
+	    ExtentSparkReporter sparkReport= new ExtentSparkReporter(System.getProperty("user.dir")+ "/ExtentReport/Report_"+ formatter.format(date) +".html");
+	    
+		
+		extent= new ExtentReports();
+		extent.attachReporter(sparkReport);
+		sparkReport.config().setDocumentTitle("Fastenal Automation");
+		sparkReport.config().setTheme(Theme.DARK);
+		sparkReport.config().setReportName("FCOM");
+		
+		extent.setSystemInfo("Executed on environment:" , "url");
+		extent.setSystemInfo("Executed on browser:" , "browser");
+		extent.setSystemInfo("Executed on OS:" , System.getProperty("os.name"));
+		extent.setSystemInfo("Executed by user:" , System.getProperty("user.name"));
+		
+		
+		
+		
+		
+		return extent;
+		
+	}
+
+}
+ 

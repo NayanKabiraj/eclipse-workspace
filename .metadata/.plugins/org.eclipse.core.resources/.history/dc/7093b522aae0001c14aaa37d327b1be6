@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package com.guiautomation.Base;
+
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class TestFactory {
+	
+	
+	BrowserFactory BF=new BrowserFactory();
+	
+	
+	
+	@BeforeMethod
+	public void LaunchApplication() {
+		DriverFactory.getInstance().setDriver(BF.createBrowserInstance("Chrome"));
+	}
+	
+	
+	
+	@AfterMethod
+	public void tearDown() {
+		
+	}
+}

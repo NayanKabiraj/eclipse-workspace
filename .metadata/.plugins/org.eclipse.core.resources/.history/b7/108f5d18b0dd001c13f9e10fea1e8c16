@@ -1,0 +1,29 @@
+package com.common.utils;
+
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+
+import com.guiautomation.Base.TestBase;
+
+public class UtilBase {
+		
+	WebDriver driver;
+	Properties prop;
+	Database DB;
+	WebServices WS;
+	GUI GUI;
+	WebTable WT;
+	
+	
+
+	public UtilBase(Properties prop, WebDriver driver) {
+		this.driver=driver;
+		this.prop=prop;
+		DB= new Database(prop.getProperty("DB_CONN"));
+		WS= new WebServices();
+		WT= new WebTable();
+		GUI=new GUI();
+	}
+
+}

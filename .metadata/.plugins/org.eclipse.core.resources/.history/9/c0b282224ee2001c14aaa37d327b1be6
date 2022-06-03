@@ -1,0 +1,59 @@
+package com.test.TestCases;
+
+
+import static org.testng.Assert.assertTrue;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.automation.base.BaseTest;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.fcom.pages.HomePage;
+import com.fcom.pages.LoginPage;
+import com.fcom.pages.SearchResultPage;
+import com.reporting.listener.CustomAsserts;
+ 
+
+public class HomePageTest extends BaseTest {
+	
+	
+	HomePage HP;
+	SearchResultPage SP ;
+	CustomAsserts customAsserts= new CustomAsserts();
+	@Test()
+	public void verifyLoginPageElements() {
+		customAsserts.logInfo("Navigating to application");
+		HP= page.getInstance(HomePage.class);
+		customAsserts.assertTrue(HP.getMyAccountLink().isDisplayed(), "Verify My Account link is displayed");
+		customAsserts.assertTrue(HP.getMyBranchLink().isDisplayed(), "Verify My Branch link is displayed");
+		customAsserts.assertTrue(HP.getMyCartLink().isDisplayed(),  "Verify My cart link is displayed");
+		customAsserts.assertTrue(HP.getSearchButton().isDisplayed(), "Verify Search button is displayed");
+		customAsserts.assertTrue(HP.getGlobalSearchBox().isDisplayed(), "Verify Search text box is displayed");
+		
+	}
+	
+	@Test()
+	public void verifyLoginPageElements123() {
+		customAsserts.logInfo("Navigating to application");
+		HP= page.getInstance(HomePage.class);
+		customAsserts.assertTrue(HP.getMyAccountLink().isDisplayed(), "Verify My Account link is displayed");
+		customAsserts.assertTrue(HP.getMyBranchLink().isDisplayed(), "Verify My Branch link is displayed");
+		customAsserts.assertTrue(HP.getMyCartLink().isDisplayed(),  "Verify My cart link is displayed");
+		customAsserts.assertTrue(HP.getSearchButton().isDisplayed(), "Verify Search button is displayed");
+		customAsserts.assertTrue(HP.getGlobalSearchBox().isDisplayed(), "Verify Search text box is displayed");
+		
+	}
+	
+	
+	
+	
+
+}

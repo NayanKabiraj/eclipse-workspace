@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package com.guiautomation.Base;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.relevantcodes.extentreports.ExtentReports;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class ExtentReportFactory {
+	static ExtentReports ER;
+	public static ExtentReports setupReport() {
+		SimpleDateFormat formatter = new SimpleDateFormat("dd_MM_yyyy_HHmmss");  
+	    Date date = new Date();
+	    ExtentSparkReporter sparkReport= new ExtentSparkReporter(System.getProperty("user.dir")+ "/ExtentReport/Report_"+ formatter.format(date) +".html")
+	    
+		
+		return null;
+		
+	}
+
+}
+ 

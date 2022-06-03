@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package com.guiautomation.Base;
+
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class ExtentReportFactory {
+	
+	
+	
+	private ExtentReportFactory() {}
+	
+private static DriverFactory instance= new ExtentReportFactory();
+	
+	public static DriverFactory getInstance() {
+		return instance;
+	}
+
+	ThreadLocal<WebDriver> driver= new ThreadLocal<WebDriver>();
+	
+	public WebDriver getDriver() {
+		return driver.get();
+	}
+	
+	public void setDriver(WebDriver driverParm) {
+		driver.set(driverParm); 
+		
+	}
+	
+	public void closeDriver() {
+		driver.get().close();
+		driver.remove();
+	}
+
+}

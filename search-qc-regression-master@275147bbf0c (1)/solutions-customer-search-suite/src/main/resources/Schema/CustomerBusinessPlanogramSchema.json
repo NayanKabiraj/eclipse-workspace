@@ -1,0 +1,446 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "addressName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/addressName",
+                "type": "string",
+                "title": "The Addressname Schema",
+                "default": "",
+                "examples": [
+                  "Test SLN-492"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "addressOne": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/addressOne",
+                "type": "string",
+                "title": "The Addressone Schema",
+                "default": "",
+                "examples": [
+                  "4959 w 3th st"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "binColumn": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/binColumn",
+                "type": "integer",
+                "title": "The Bincolumn Schema",
+                "default": 0,
+                "examples": [
+                  3
+                ]
+              },
+              "binPosition": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/binPosition",
+                "type": "string",
+                "title": "The Binposition Schema",
+                "default": "",
+                "examples": [
+                  "1+3"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "binRow": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/binRow",
+                "type": "integer",
+                "title": "The Binrow Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "binstockPlanogramId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/binstockPlanogramId",
+                "type": "string",
+                "title": "The Binstockplanogramid Schema",
+                "default": "",
+                "examples": [
+                  "150153706"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCode",
+                "type": "string",
+                "title": "The Bucode Schema",
+                "default": "",
+                "examples": [
+                  "GAAT7"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "city": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/city",
+                "type": "string",
+                "title": "The City Schema",
+                "default": "",
+                "examples": [
+                  "Winona"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "containerTypeId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/containerTypeId",
+                "type": "integer",
+                "title": "The Containertypeid Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "country": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/country",
+                "type": "string",
+                "title": "The Country Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerAddressId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerAddressId",
+                "type": "integer",
+                "title": "The Customeraddressid Schema",
+                "default": 0,
+                "examples": [
+                  44314182
+                ]
+              },
+              "customerId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerId",
+                "type": "string",
+                "title": "The Customerid Schema",
+                "default": "",
+                "examples": [
+                  "GAAT70002"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerLocationId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerLocationId",
+                "type": "integer",
+                "title": "The Customerlocationid Schema",
+                "default": 0,
+                "examples": [
+                  14490922
+                ]
+              },
+              "daysOnHand": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/daysOnHand",
+                "type": "integer",
+                "title": "The Daysonhand Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "displayOrderSequence": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/displayOrderSequence",
+                "type": "integer",
+                "title": "The Displayordersequence Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "inventoryTurns": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/inventoryTurns",
+                "type": "number",
+                "title": "The Inventoryturns Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "inventoryValue": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/inventoryValue",
+                "type": "number",
+                "title": "The Inventoryvalue Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "isActive": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isActive",
+                "type": "boolean",
+                "title": "The Isactive Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "isConsigned": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isConsigned",
+                "type": "boolean",
+                "title": "The Isconsigned Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isFixed": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isFixed",
+                "type": "boolean",
+                "title": "The Isfixed Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "labelSizeId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/labelSizeId",
+                "type": "integer",
+                "title": "The Labelsizeid Schema",
+                "default": 0,
+                "examples": [
+                  31
+                ]
+              },
+              "lastModifiedDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastModifiedDate",
+                "type": "string",
+                "title": "The Lastmodifieddate Schema",
+                "default": "",
+                "examples": [
+                  "2019-04-09"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "locationName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/locationName",
+                "type": "string",
+                "title": "The Locationname Schema",
+                "default": "",
+                "examples": [
+                  "new"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "maxQty": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/maxQty",
+                "type": "integer",
+                "title": "The Maxqty Schema",
+                "default": 0,
+                "examples": [
+                  2
+                ]
+              },
+              "minQty": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/minQty",
+                "type": "integer",
+                "title": "The Minqty Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "minimumOrderQty": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/minimumOrderQty",
+                "type": "integer",
+                "title": "The Minimumorderqty Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "name": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "CHICKEN FLARE (LAURA MESADIEU ONLY)"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "planogramId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/planogramId",
+                "type": "string",
+                "title": "The Planogramid Schema",
+                "default": "",
+                "examples": [
+                  "150153706"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "planogramName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/planogramName",
+                "type": "string",
+                "title": "The Planogramname Schema",
+                "default": "",
+                "examples": [
+                  "Test"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "posPlanogramId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/posPlanogramId",
+                "type": "string",
+                "title": "The Posplanogramid Schema",
+                "default": "",
+                "examples": [
+                  "11166"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "postalCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/postalCode",
+                "type": "string",
+                "title": "The Postalcode Schema",
+                "default": "",
+                "examples": [
+                  "55987"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "qoh": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/qoh",
+                "type": "integer",
+                "title": "The Qoh Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "salesChannels": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/salesChannels",
+                "type": "string",
+                "title": "The Saleschannels Schema",
+                "default": "",
+                "examples": [
+                  "binstock"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "sku": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sku",
+                "type": "string",
+                "title": "The Sku Schema",
+                "default": "",
+                "examples": [
+                  "5508"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "skuDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/skuDescription",
+                "type": "string",
+                "title": "The Skudescription Schema",
+                "default": "",
+                "examples": [
+                  "Unknown Kit"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "stateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/stateCode",
+                "type": "string",
+                "title": "The Statecode Schema",
+                "default": "",
+                "examples": [
+                  "MN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "unitPrice": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/unitPrice",
+                "type": "number",
+                "title": "The Unitprice Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "planogramDetails"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",
+      "required": [
+        "parameters"
+      ],
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",
+          "required": [
+            "customerId"
+          ],
+          "properties": {
+            "customerId": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerId",
+              "type": "string",
+              "title": "The Customerid Schema",
+              "default": "",
+              "examples": [
+                "GAAT70002"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

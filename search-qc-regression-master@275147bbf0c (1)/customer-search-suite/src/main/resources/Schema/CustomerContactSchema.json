@@ -1,0 +1,234 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "buCountry": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCountry",
+                "type": "string",
+                "title": "The Bucountry Schema",
+                "default": "",
+                "examples": [
+                  "CAN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "contactCreatorId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/contactCreatorId",
+                "type": "string",
+                "title": "The Contactcreatorid Schema",
+                "default": "",
+                "examples": [
+                  "ONCOR"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerContactId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerContactId",
+                "type": "integer",
+                "title": "The Customercontactid Schema",
+                "default": 0,
+                "examples": [
+                  13566961
+                ]
+              },
+              "customerNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerNumber",
+                "type": "string",
+                "title": "The Customernumber Schema",
+                "default": "",
+                "examples": [
+                  "ONCOR0666"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerName",
+                "type": "string",
+                "title": "The Customername Schema",
+                "default": "",
+                "examples": [
+                  "CAMERON NETWORKS"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "email": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/email",
+                "type": "string",
+                "title": "The Email Schema",
+                "default": "",
+                "examples": [
+                  "steve@cameronnetworks.com"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "fax": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/fax",
+                "type": "string",
+                "title": "The Fax Schema",
+                "default": "",
+                "examples": [
+                  "613-933-0892"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "firstName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/firstName",
+                "type": "string",
+                "title": "The Firstname Schema",
+                "default": "",
+                "examples": [
+                  "Steve"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isActive": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isActive",
+                "type": "boolean",
+                "title": "The Isactive Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "isPrimaryContact": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isPrimaryContact",
+                "type": "boolean",
+                "title": "The Isprimarycontact Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "lastName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastName",
+                "type": "string",
+                "title": "The Lastname Schema",
+                "default": "",
+                "examples": [
+                  "Burke"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "ownerBu": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/ownerBu",
+                "type": "string",
+                "title": "The Ownerbu Schema",
+                "default": "",
+                "examples": [
+                  "ONCOR"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "phone": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/phone",
+                "type": "string",
+                "title": "The Phone Schema",
+                "default": "",
+                "examples": [
+                  "613-551-6531"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "posCustomerContactId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/posCustomerContactId",
+                "type": "integer",
+                "title": "The Poscustomercontactid Schema",
+                "default": 0,
+                "examples": [
+                  1382
+                ]
+              },
+              "title": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/title",
+                "type": "string",
+                "title": "The Title Schema",
+                "default": "",
+                "examples": [
+                  "Operations Manager"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerContact"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",      
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",          
+          "properties": {
+            "email": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/email",
+              "type": "string",
+              "title": "The Email Schema",
+              "default": "",
+              "examples": [
+                "steve@cameronnetworks.com"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

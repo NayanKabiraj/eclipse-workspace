@@ -1,0 +1,515 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "address1": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/address1",
+                "type": "string",
+                "title": "The Address1 Schema",
+                "default": "",
+                "examples": [
+                  "2413 Advance Road"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCode",
+                "type": "string",
+                "title": "The Bucode Schema",
+                "default": "",
+                "examples": [
+                  "WIMAD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buCode4": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCode4",
+                "type": "string",
+                "title": "The Bucode4 Schema",
+                "default": "",
+                "examples": [
+                  "MADN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buGroup": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buGroup",
+                "type": "string",
+                "title": "The Bugroup Schema",
+                "default": "",
+                "examples": [
+                  "BRANCH"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buOperationStatus": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buOperationStatus",
+                "type": "string",
+                "title": "The Buoperationstatus Schema",
+                "default": "",
+                "examples": [
+                  "Open For Sales"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buStatus": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buStatus",
+                "type": "string",
+                "title": "The Bustatus Schema",
+                "default": "",
+                "examples": [
+                  "OPEN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buType": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buType",
+                "type": "string",
+                "title": "The Butype Schema",
+                "default": "",
+                "examples": [
+                  "BRNC"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "city": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/city",
+                "type": "string",
+                "title": "The City Schema",
+                "default": "",
+                "examples": [
+                  "MADISON"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "companyCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/companyCode",
+                "type": "string",
+                "title": "The Companycode Schema",
+                "default": "",
+                "examples": [
+                  "FCUSA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "connectionType": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/connectionType",
+                "type": "string",
+                "title": "The Connectiontype Schema",
+                "default": "",
+                "examples": [
+                  "DIAL-UP"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "country": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/country",
+                "type": "string",
+                "title": "The Country Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "county": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/county",
+                "type": "string",
+                "title": "The County Schema",
+                "default": "",
+                "examples": [
+                  "DANE"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "currencyCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/currencyCode",
+                "type": "string",
+                "title": "The Currencycode Schema",
+                "default": "",
+                "examples": [
+                  "USD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "departmentId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/departmentId",
+                "type": "string",
+                "title": "The Departmentid Schema",
+                "default": "",
+                "examples": [
+                  "01WIMAD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "district": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/district",
+                "type": "string",
+                "title": "The District Schema",
+                "default": "",
+                "examples": [
+                  "01D0525"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "districtManager": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/districtManager",
+                "type": "string",
+                "title": "The Districtmanager Schema",
+                "default": "",
+                "examples": [
+                  "Troy Parkos"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "districtManagerUser": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/districtManagerUser",
+                "type": "string",
+                "title": "The Districtmanageruser Schema",
+                "default": "",
+                "examples": [
+                  "TPARKOS"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "fasCampusId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/fasCampusId",
+                "type": "integer",
+                "title": "The Fascampusid Schema",
+                "default": 0,
+                "examples": [
+                  761695
+                ]
+              },
+              "fax": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/fax",
+                "type": "string",
+                "title": "The Fax Schema",
+                "default": "",
+                "examples": [
+                  "(608)222-0650"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "googleCountryCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/googleCountryCode",
+                "type": "string",
+                "title": "The Googlecountrycode Schema",
+                "default": "",
+                "examples": [
+                  "US"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isOnPeopleSoftTree": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isOnPeopleSoftTree",
+                "type": "boolean",
+                "title": "The Isonpeoplesofttree Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "isStreetCount": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isStreetCount",
+                "type": "boolean",
+                "title": "The Isstreetcount Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "lastModifyDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastModifyDate",
+                "type": "string",
+                "title": "The Lastmodifydate Schema",
+                "default": "",
+                "examples": [
+                  "2018-03-08"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "openDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openDate",
+                "type": "string",
+                "title": "The Opendate Schema",
+                "default": "",
+                "examples": [
+                  "1978-02-01"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "phone": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/phone",
+                "type": "string",
+                "title": "The Phone Schema",
+                "default": "",
+                "examples": [
+                  "(608)222-3278"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "postalCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/postalCode",
+                "type": "string",
+                "title": "The Postalcode Schema",
+                "default": "",
+                "examples": [
+                  "53718"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "primaryCSPDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/primaryCSPDate",
+                "type": "string",
+                "title": "The Primarycspdate Schema",
+                "default": "",
+                "examples": [
+                  "2017-07-20"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "primaryCSPFlag": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/primaryCSPFlag",
+                "type": "string",
+                "title": "The Primarycspflag Schema",
+                "default": "",
+                "examples": [
+                  "S"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "region": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/region",
+                "type": "string",
+                "title": "The Region Schema",
+                "default": "",
+                "examples": [
+                  "01R0500"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "regionalVP": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/regionalVP",
+                "type": "string",
+                "title": "The Regionalvp Schema",
+                "default": "",
+                "examples": [
+                  "WI-IL - Ross Surratt"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "regionalFinanceManagerId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/regionalFinanceManagerId",
+                "type": "string",
+                "title": "The Regionalfinancemanagerid Schema",
+                "default": "",
+                "examples": [
+                  "0065573"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "regionalFinanceManagerName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/regionalFinanceManagerName",
+                "type": "string",
+                "title": "The Regionalfinancemanagername Schema",
+                "default": "",
+                "examples": [
+                  "Jackie Gerrits"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "regionalManagerUser": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/regionalManagerUser",
+                "type": "string",
+                "title": "The Regionalmanageruser Schema",
+                "default": "",
+                "examples": [
+                  "RSURRATT"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "reportingGroupDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/reportingGroupDescription",
+                "type": "string",
+                "title": "The Reportinggroupdescription Schema",
+                "default": "",
+                "examples": [
+                  "HEINGREATLAKES"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "reportingRegionGroupDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/reportingRegionGroupDescription",
+                "type": "string",
+                "title": "The Reportingregiongroupdescription Schema",
+                "default": "",
+                "examples": [
+                  "HEINWIIL"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "reportingUnitDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/reportingUnitDescription",
+                "type": "string",
+                "title": "The Reportingunitdescription Schema",
+                "default": "",
+                "examples": [
+                  "HEIN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "reportingUnitManager": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/reportingUnitManager",
+                "type": "string",
+                "title": "The Reportingunitmanager Schema",
+                "default": "",
+                "examples": [
+                  "0001220"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "reportingUnitManagerName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/reportingUnitManagerName",
+                "type": "string",
+                "title": "The Reportingunitmanagername Schema",
+                "default": "",
+                "examples": [
+                  "Lee Hein"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "servicingHub": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/servicingHub",
+                "type": "string",
+                "title": "The Servicinghub Schema",
+                "default": "",
+                "examples": [
+                  "MN100"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "state": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/state",
+                "type": "string",
+                "title": "The State Schema",
+                "default": "",
+                "examples": [
+                  "WI"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "streetDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/streetDate",
+                "type": "string",
+                "title": "The Streetdate Schema",
+                "default": "",
+                "examples": [
+                  "1978-02-01"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "webBuStatus": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/webBuStatus",
+                "type": "string",
+                "title": "The Webbustatus Schema",
+                "default": "",
+                "examples": [
+                  "OPEN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "latlon": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/latlon",
+                "type": "object",
+                "title": "The Latlon Schema",
+                "required": [
+                  "lat",
+                  "lon"
+                ],
+                "properties": {
+                  "lat": {
+                    "$id": "#/properties/responseBody/properties/data/items/properties/latlon/properties/lat",
+                    "type": "number",
+                    "title": "The Lat Schema",
+                    "default": 0.0,
+                    "examples": [
+                      43.063618
+                    ]
+                  },
+                  "lon": {
+                    "$id": "#/properties/responseBody/properties/data/items/properties/latlon/properties/lon",
+                    "type": "number",
+                    "title": "The Lon Schema",
+                    "default": 0.0,
+                    "examples": [
+                      -89.30249099999999
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "businessUnit"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package com.automation.base;
+
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class CustomAsserts  {
+	
+	
+	ExtentReportFactory EF;
+	
+	
+	public CustomAsserts(WebDriver driver) {
+		EF.getInstance().getExtent();
+	}
+	
+	
+	public static void verifyTrue(boolean condition, String ) {
+		
+	}
+	
+
+	
+	
+	
+
+}

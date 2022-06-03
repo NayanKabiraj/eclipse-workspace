@@ -1,0 +1,236 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "accountingDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/accountingDate",
+                "type": "string",
+                "title": "The Accountingdate Schema",
+                "default": "",
+                "examples": [
+                  "2014-09-05"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "amount": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/amount",
+                "type": "number",
+                "title": "The Amount Schema",
+                "default": 0.0,
+                "examples": [
+                  7.55
+                ]
+              },
+              "amountToCustomer": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/amountToCustomer",
+                "type": "number",
+                "title": "The Amounttocustomer Schema",
+                "default": 0.0,
+                "examples": [
+                  -7.55
+                ]
+              },
+              "currencyCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/currencyCode",
+                "type": "string",
+                "title": "The Currencycode Schema",
+                "default": "",
+                "examples": [
+                  "USD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerNumber",
+                "type": "string",
+                "title": "The Customernumber Schema",
+                "default": "",
+                "examples": [
+                  "ALMO20284"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "entryType": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/entryType",
+                "type": "string",
+                "title": "The Entrytype Schema",
+                "default": "",
+                "examples": [
+                  "OA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "invoiceNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceNumber",
+                "type": "string",
+                "title": "The Invoicenumber Schema",
+                "default": "",
+                "examples": [
+                  "ALMO218255"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "originalInvoiceNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/originalInvoiceNumber",
+                "type": "string",
+                "title": "The Originalinvoicenumber Schema",
+                "default": "",
+                "examples": [
+                  "ALMO218255"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "paymentId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/paymentId",
+                "type": "string",
+                "title": "The Paymentid Schema",
+                "default": "",
+                "examples": [
+                  "25255375"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "paymentMethod": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/paymentMethod",
+                "type": "string",
+                "title": "The Paymentmethod Schema",
+                "default": "",
+                "examples": [
+                  "CSH"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "paymentMethodDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/paymentMethodDescription",
+                "type": "string",
+                "title": "The Paymentmethoddescription Schema",
+                "default": "",
+                "examples": [
+                  "Cash"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "paymentStatus": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/paymentStatus",
+                "type": "string",
+                "title": "The Paymentstatus Schema",
+                "default": "",
+                "examples": [
+                  "C"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "paymentStatusDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/paymentStatusDescription",
+                "type": "string",
+                "title": "The Paymentstatusdescription Schema",
+                "default": "",
+                "examples": [
+                  "Complete"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "postDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/postDate",
+                "type": "string",
+                "title": "The Postdate Schema",
+                "default": "",
+                "examples": [
+                  "2014-09-07"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "invoicePayment"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",      
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",          
+          "properties": {
+            "invoiceNumber": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/invoiceNumber",
+              "type": "string",
+              "title": "The Invoicenumber Schema",
+              "default": "",
+              "examples": [
+                "ALMO218255"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "customerNumber": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerNumber",
+              "type": "string",
+              "title": "The Customernumber Schema",
+              "default": "",
+              "examples": [
+                "ALMO20284"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

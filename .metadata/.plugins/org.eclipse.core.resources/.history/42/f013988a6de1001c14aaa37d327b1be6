@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.reporting.listener;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class ExtentReportListener {
+
+}

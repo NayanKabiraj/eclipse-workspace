@@ -1,0 +1,84 @@
+package com.automation.base;
+
+import java.io.FileInputStream;
+import java.sql.DriverManager;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Reporter;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.github.dockerjava.transport.DockerHttpClient.Request.Method;
+
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class BaseTest {
+	
+
+	WebDriver driver;
+	WebDriverManager drvManager;
+	BrowserFactory browserFactory= new BrowserFactory();
+	public Page page;
+	public Properties prop;
+	FileInputStream ip;
+	static String propLoc=System.getProperty("user.dir")+ "/src/main/java/com/fcom/configuration/";
+	ExtentTest EF= ExtentReportFactory.getInstance().getExtent();
+	
+
+	@BeforeMethod
+	@Parameters({"BROWSER","ENVIRONMENT"}) 
+	public void setUpTest(String BROWSER, String ENVIRONMENT) {
+			prop= new Properties();
+			DriverFactory.getInstance().setDriver(browserFactory.createBrowserInstance(BROWSER));
+			driver= DriverFactory.getInstance().getDriver();
+			Reporter.log(BROWSER+ " Invoked successfully");
+		try {
+		if (ENVIRONMENT.equalsIgnoreCase("TST")) {
+				ip=new FileInputStream(propLoc + "TST.properties");
+			}
+		else if(ENVIRONMENT.equalsIgnoreCase("STAGE")) {
+			ip=new FileInputStream( propLoc + "STAGE.properties");
+		}
+		else if(ENVIRONMENT.equalsIgnoreCase("PROD")) {
+			ip=new FileInputStream( propLoc + "PROD.properties");
+		}
+		prop.load(ip);
+		Reporter.log(ENVIRONMENT+ " configuration set up successfully");
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		driver.manage().window().maximize();
+		page= new Action(driver);
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		DriverFactory.getInstance().closeDriver();
+	}
+	
+	public void invokeApplication() {
+		driver.get(prop.getProperty("URL"));
+		EF.log(Status.INFO, "Navigating to " + prop.getProperty("URL"));
+	}
+	
+	public void CloseApplication() {
+		driver.quit();
+	}
+	 
+	
+	
+	
+
+}

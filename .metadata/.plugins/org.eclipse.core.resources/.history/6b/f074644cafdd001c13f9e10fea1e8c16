@@ -1,0 +1,11 @@
+package com.common.utils;
+
+public class Database {
+	
+	
+	
+	public void Database(String connString) {
+		
+	}
+
+}

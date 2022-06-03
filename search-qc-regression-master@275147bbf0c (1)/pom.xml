@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.fastenal.qa</groupId>
+	<artifactId>EsearchApiTesting</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>EsearchApiTesting</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>1.8</java.version>
+		<maven.surefire.version>2.22.1</maven.surefire.version>
+	</properties>
+
+	<!-- <repositories>
+		<repository>
+			<id>ThirdParty</id>
+			<url>http://maven-repository.fastenal.com:8081/nexus/content/repositories/thirdparty/</url>
+		</repository>
+	</repositories> -->
+	<modules>
+		<module>api-testing-utilities</module>
+		<module>customer-search-suite</module>
+		<module>business-units-search-suite</module>
+		<module>employee-search-suite</module>
+		<module>invoice-search-suite</module>
+		<module>customer-usage-search-suite</module>
+		<module>solutions-customer-search-suite</module>
+		<module>esearch-project-utilities</module>
+	</modules>
+
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-site-plugin -->
+		<!-- <dependency> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-site-plugin</artifactId> 
+			<version>3.7.1</version> </dependency> https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-project-info-reports-plugin 
+			<dependency> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-project-info-reports-plugin</artifactId> 
+			<version>3.0.0</version> </dependency> -->
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/json-schema-validator -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>json-schema-validator</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.oracle/ojdbc14 -->
+		<!-- <dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.3</version>
+		</dependency> -->
+		<dependency>
+			<groupId>org.everit.json</groupId>
+			<artifactId>org.everit.json.schema</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.9.8</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>2.11.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>2.11.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path-assert</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+		<!-- <dependency> <groupId>com.fastenal.qa</groupId> <artifactId>api-testing-utilities</artifactId> 
+			<version>0.0.1-SNAPSHOT</version> </dependency> -->
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+				</configuration>
+				<version>3.8.0</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.version}</version>
+				<configuration>					
+					<parallel>classes</parallel>
+					<threadCount>5</threadCount>			
+					<systemPropertyVariables>
+						<environment>${environment}</environment>
+						<indexUsername>${indexUsername}</indexUsername>
+						<indexPassword>${indexPassword}</indexPassword>
+					</systemPropertyVariables>
+					<groups>${suiteName}</groups>
+				</configuration>
+			</plugin>			
+		</plugins>
+	</build>
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>${maven.surefire.version}</version>
+				<configuration>
+					<aggregate>true</aggregate>
+					<!-- also set this to link to generated source reports -->
+					<linkXRef>true</linkXRef>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+</project>

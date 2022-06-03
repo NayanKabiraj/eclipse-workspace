@@ -1,0 +1,30 @@
+package com.test.TestCases;
+
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.fcom.pages.LoginPage;
+import com.guiautomation.Base.BaseTest;
+
+public class LoginPageTest extends BaseTest {
+	
+	
+	LoginPage lp;
+	@Test()
+	public void verifyLoginPageElements() {
+		lp= page.getInstance(LoginPage.class);
+		Reporter.log("Verify Test");
+		Reporter.log("Verify Test");
+		Assert.assertEquals("asdhgahgjhfd","asdhgahgjhfd");
+	}
+	
+
+}

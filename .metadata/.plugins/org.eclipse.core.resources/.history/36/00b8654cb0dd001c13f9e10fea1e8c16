@@ -1,0 +1,15 @@
+package com.common.utils;
+
+public class Database {
+	
+	
+	
+	public Database(String string) {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+	
+
+}

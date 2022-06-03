@@ -1,0 +1,338 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "buCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCode",
+                "type": "string",
+                "title": "The Bucode Schema",
+                "default": "",
+                "examples": [
+                  "LALAF"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryOne": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryOne",
+                "type": "string",
+                "title": "The Categoryone Schema",
+                "default": "",
+                "examples": [
+                  "Fasteners"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryThree": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryThree",
+                "type": "string",
+                "title": "The Categorythree Schema",
+                "default": "",
+                "examples": [
+                  "Blind Rivets"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryTwo": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryTwo",
+                "type": "string",
+                "title": "The Categorytwo Schema",
+                "default": "",
+                "examples": [
+                  "Rivets"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerId",
+                "type": "string",
+                "title": "The Customerid Schema",
+                "default": "",
+                "examples": [
+                  "LALAF1785"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerName",
+                "type": "string",
+                "title": "The Customername Schema",
+                "default": "",
+                "examples": [
+                  "AAA SIGNS [VENDING]"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "dunsNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/dunsNumber",
+                "type": "string",
+                "title": "The Dunsnumber Schema",
+                "default": "",
+                "examples": [
+                  "084965560"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "imageUrl": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/imageUrl",
+                "type": "string",
+                "title": "The Imageurl Schema",
+                "default": "",
+                "examples": [
+                  "https://img2.fastenal.com/productimages/0155914.jpg"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "invoiceQuoteIndicator": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceQuoteIndicator",
+                "type": "string",
+                "title": "The Invoicequoteindicator Schema",
+                "default": "",
+                "examples": [
+                  "I"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isLowMargin": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isLowMargin",
+                "type": "boolean",
+                "title": "The Islowmargin Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isStdItem": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isStdItem",
+                "type": "boolean",
+                "title": "The Isstditem Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "lastInvoicedDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastInvoicedDate",
+                "type": "string",
+                "title": "The Lastinvoiceddate Schema",
+                "default": "",
+                "examples": [
+                  "2019-07-12"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "lastInvoicedNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastInvoicedNumber",
+                "type": "string",
+                "title": "The Lastinvoicednumber Schema",
+                "default": "",
+                "examples": [
+                  "LALAF174456"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "lastQtySold": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastQtySold",
+                "type": "integer",
+                "title": "The Lastqtysold Schema",
+                "default": 0,
+                "examples": [
+                  1000
+                ]
+              },
+              "lastSalePrice": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastSalePrice",
+                "type": "number",
+                "title": "The Lastsaleprice Schema",
+                "default": 0.0,
+                "examples": [
+                  0.0301
+                ]
+              },
+              "pkgQuantity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/pkgQuantity",
+                "type": "integer",
+                "title": "The Pkgquantity Schema",
+                "default": 0,
+                "examples": [
+                  500
+                ]
+              },
+              "publicVendorName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/publicVendorName",
+                "type": "string",
+                "title": "The Publicvendorname Schema",
+                "default": "",
+                "examples": [
+                  "Fastenal Approved Vendor"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "salePriceEval": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/salePriceEval",
+                "type": "string",
+                "title": "The Salepriceeval Schema",
+                "default": "",
+                "examples": [
+                  "Good"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "salesChannel": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/salesChannel",
+                "type": "string",
+                "title": "The Saleschannel Schema",
+                "default": "",
+                "examples": [
+                  "BIN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "sku": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sku",
+                "type": "string",
+                "title": "The Sku Schema",
+                "default": "",
+                "examples": [
+                  "41009"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "skuDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/skuDescription",
+                "type": "string",
+                "title": "The Skudescription Schema",
+                "default": "",
+                "examples": [
+                  "AB4-4A - W/Drill Bit"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "skuLongDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/skuLongDescription",
+                "type": "string",
+                "title": "The Skulongdescription Schema",
+                "default": "",
+                "examples": [
+                  "1/8\" Dia .188-.250\" Grip Range AB44A Aluminum Rivet - W/Drill Bit"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "sumOfQtySold": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sumOfQtySold",
+                "type": "integer",
+                "title": "The Sumofqtysold Schema",
+                "default": 0,
+                "examples": [
+                  47500
+                ]
+              },
+              "timesInvoiced": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/timesInvoiced",
+                "type": "integer",
+                "title": "The Timesinvoiced Schema",
+                "default": 0,
+                "examples": [
+                  21
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerUsageDetails"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",
+      "required": [
+        "parameters"
+      ],
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",
+          "required": [
+            "sku",
+            "dunsNumber"
+          ],
+          "properties": {
+            "sku": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/sku",
+              "type": "string",
+              "title": "The Sku Schema",
+              "default": "",
+              "examples": [
+                "41009"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "dunsNumber": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/dunsNumber",
+              "type": "string",
+              "title": "The Dunsnumber Schema",
+              "default": "",
+              "examples": [
+                "084965560"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

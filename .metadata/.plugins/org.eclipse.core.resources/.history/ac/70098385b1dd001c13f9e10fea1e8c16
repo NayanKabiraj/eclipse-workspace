@@ -1,0 +1,33 @@
+package com.test.TestCases;
+
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.fcom.pages.LoginPage;
+import com.guiautomation.Base.TestBase;
+
+public class LoginPageTest  {
+	
+	
+	LoginPage lp;
+	@Test()
+	public void verifyLoginPageElements() {
+		lp= page.getInstance(LoginPage.class);
+		Assert.assertEquals(lp.getName().isDisplayed(), true);
+		Assert.assertEquals(lp.getPassword().isDisplayed(), true);
+	}
+	
+	
+	@Test
+	public void TestValidLogin() {
+		lp.doLogin(prop.getProperty("username"), null);
+		
+	}
+	
+	
+	
+
+}

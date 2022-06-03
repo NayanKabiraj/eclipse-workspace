@@ -1,0 +1,48 @@
+/**
+ * 
+ */
+package com.automation.base;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.Reporter;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class BrowserFactory {
+	
+	WebDriverManager drvManager;
+	//carete a web Driver object for given browser 
+	public WebDriver createBrowserInstance(String BROWSER) {
+		WebDriver driver= null;
+		if (BROWSER.equalsIgnoreCase("chrome")) {
+			drvManager.chromedriver().setup();
+			driver= new ChromeDriver();
+			Reporter.log(BROWSER+ " Invoked successfully");
+		}
+		else if (BROWSER.equalsIgnoreCase("ff")) {
+			drvManager.firefoxdriver().setup();
+			driver= new FirefoxDriver();
+			Reporter.log(BROWSER+ " Invoked successfully");
+		}
+		else if (BROWSER.equalsIgnoreCase("ie")) {
+			drvManager.iedriver().setup();
+			driver= new InternetExplorerDriver();
+			Reporter.log(BROWSER+ " Invoked successfully");
+		}
+		else {
+			System.out.println(BROWSER+ " is not a configured browser");
+			Reporter.log(BROWSER+ " is not a configured browser");
+		}
+		driver.manage().window().maximize();
+		return driver;
+		
+	}
+
+}

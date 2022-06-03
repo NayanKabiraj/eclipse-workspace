@@ -1,0 +1,624 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",
+      "required": [
+        "data"
+      ],
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "required": [
+              "billingCreatorId",
+              "billingDescription",
+              "buCode",
+              "buCountry",
+              "buStateCode",
+              "currencyCode",
+              "customerNumber",
+              "customerPOSNumber",
+              "district",              
+              "fourLetterBuCode",
+              "hasContract",
+              "held30Days",
+              "held60Days",
+              "held90Days",
+              "heldAll",
+              "heldOld",
+              "isActive",
+              "isBankrupt",
+              "isEdi",
+              "isFastConnect",
+              "isFastenalManagedInventory",
+              "isKeyAccount",
+              "isLinked",
+              "isLocked",
+              "isProspect",
+              "isVending",
+              "isWeb",
+              "lastModifyDate",
+              "monthers",
+              "name",
+              "openBalance",
+              "openBalance30Days",
+              "openBalance60Days",
+              "openBalance90Days",
+              "openBalanceOld",
+              "openDate",
+              "region",
+              "sevenLetterBuCode",
+              "shippingCreatorId",
+              "shippingDescription",
+              "syncToMobileApps",
+              "tier",
+              "accountType"
+            ],
+            "properties": {
+              "billingCreatorId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingCreatorId",
+                "type": "string",
+                "title": "The Billingcreatorid Schema",
+                "default": "",
+                "examples": [
+                  "CORPORATE"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingDescription",
+                "type": "string",
+                "title": "The Billingdescription Schema",
+                "default": "",
+                "examples": [
+                  "Main Office"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCode",
+                "type": "string",
+                "title": "The Bucode Schema",
+                "default": "",
+                "examples": [
+                  "WIMAD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buCountry": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCountry",
+                "type": "string",
+                "title": "The Bucountry Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buStateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buStateCode",
+                "type": "string",
+                "title": "The Bustatecode Schema",
+                "default": "",
+                "examples": [
+                  "WI"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "currencyCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/currencyCode",
+                "type": "string",
+                "title": "The Currencycode Schema",
+                "default": "",
+                "examples": [
+                  "USD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerNumber",
+                "type": "string",
+                "title": "The Customernumber Schema",
+                "default": "",
+                "examples": [
+                  "WIMAD3282"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerPOSNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerPOSNumber",
+                "type": "string",
+                "title": "The Customerposnumber Schema",
+                "default": "",
+                "examples": [
+                  "MADN3282"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "district": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/district",
+                "type": "string",
+                "title": "The District Schema",
+                "default": "",
+                "examples": [
+                  "01D0528"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "districtManagerEmployeeId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/districtManagerEmployeeId",
+                "type": "integer",
+                "title": "The Districtmanageremployeeid Schema",
+                "default": 0,
+                "examples": [
+                  969
+                ]
+              },
+              "districtManagerEmployeeName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/districtManagerEmployeeName",
+                "type": "string",
+                "title": "The Districtmanageremployeename Schema",
+                "default": "",
+                "examples": [
+                  "Ronald Gardner"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "fourLetterBuCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/fourLetterBuCode",
+                "type": "string",
+                "title": "The Fourletterbucode Schema",
+                "default": "",
+                "examples": [
+                  "MADN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "hasContract": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/hasContract",
+                "type": "boolean",
+                "title": "The Hascontract Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "held30Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/held30Days",
+                "type": "integer",
+                "title": "The Held30days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "held60Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/held60Days",
+                "type": "integer",
+                "title": "The Held60days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "held90Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/held90Days",
+                "type": "integer",
+                "title": "The Held90days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "heldAll": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/heldAll",
+                "type": "integer",
+                "title": "The Heldall Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "heldOld": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/heldOld",
+                "type": "integer",
+                "title": "The Heldold Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "isActive": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isActive",
+                "type": "boolean",
+                "title": "The Isactive Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "isBankrupt": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isBankrupt",
+                "type": "boolean",
+                "title": "The Isbankrupt Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isEdi": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isEdi",
+                "type": "boolean",
+                "title": "The Isedi Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isFastConnect": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isFastConnect",
+                "type": "boolean",
+                "title": "The Isfastconnect Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isFastenalManagedInventory": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isFastenalManagedInventory",
+                "type": "boolean",
+                "title": "The Isfastenalmanagedinventory Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isKeyAccount": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isKeyAccount",
+                "type": "boolean",
+                "title": "The Iskeyaccount Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isLinked": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isLinked",
+                "type": "boolean",
+                "title": "The Islinked Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isLocked": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isLocked",
+                "type": "boolean",
+                "title": "The Islocked Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isProspect": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isProspect",
+                "type": "boolean",
+                "title": "The Isprospect Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isVending": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isVending",
+                "type": "boolean",
+                "title": "The Isvending Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isWeb": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isWeb",
+                "type": "boolean",
+                "title": "The Isweb Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "lastModifyDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastModifyDate",
+                "type": "string",
+                "title": "The Lastmodifydate Schema",
+                "default": "",
+                "examples": [
+                  "2019-06-18T17:25:51"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "monthers": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/monthers",
+                "type": "string",
+                "title": "The Monthers Schema",
+                "default": "",
+                "examples": [
+                  "0"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "name": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "AMERICAN DEMOLITION CORPORATION"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "openBalance": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalance",
+                "type": "number",
+                "title": "The Openbalance Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openBalance30Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalance30Days",
+                "type": "integer",
+                "title": "The Openbalance30days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openBalance60Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalance60Days",
+                "type": "integer",
+                "title": "The Openbalance60days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openBalance90Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalance90Days",
+                "type": "integer",
+                "title": "The Openbalance90days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openBalanceOld": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalanceOld",
+                "type": "integer",
+                "title": "The Openbalanceold Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openDate",
+                "type": "string",
+                "title": "The Opendate Schema",
+                "default": "",
+                "examples": [
+                  "2017-02-23"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "region": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/region",
+                "type": "string",
+                "title": "The Region Schema",
+                "default": "",
+                "examples": [
+                  "01R0500"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "regionalVicePresidentEmployeeId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/regionalVicePresidentEmployeeId",
+                "type": "integer",
+                "title": "The Regionalvicepresidentemployeeid Schema",
+                "default": 0,
+                "examples": [
+                  2223
+                ]
+              },
+              "regionalVicePresidentEmployeeName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/regionalVicePresidentEmployeeName",
+                "type": "string",
+                "title": "The Regionalvicepresidentemployeename Schema",
+                "default": "",
+                "examples": [
+                  "Troy Parkos"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "sevenLetterBuCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sevenLetterBuCode",
+                "type": "string",
+                "title": "The Sevenletterbucode Schema",
+                "default": "",
+                "examples": [
+                  "01WIMAD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingCreatorId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingCreatorId",
+                "type": "string",
+                "title": "The Shippingcreatorid Schema",
+                "default": "",
+                "examples": [
+                  "CORPORATE"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingDescription",
+                "type": "string",
+                "title": "The Shippingdescription Schema",
+                "default": "",
+                "examples": [
+                  "Main Office"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "syncToMobileApps": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/syncToMobileApps",
+                "type": "boolean",
+                "title": "The Synctomobileapps Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "tier": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/tier",
+                "type": "integer",
+                "title": "The Tier Schema",
+                "default": 0,
+                "examples": [
+                  5
+                ]
+              },
+              "accountType": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/accountType",
+                "type": "string",
+                "title": "The Accounttype Schema",
+                "default": "",
+                "examples": [
+                  "SML"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerDetails"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",
+      "required": [
+        "parameters"
+      ],
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",
+          "required": [
+            "buCode"
+          ],
+          "properties": {
+            "buCode": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/buCode",
+              "type": "string",
+              "title": "The Bucode Schema",
+              "default": "",
+              "examples": [
+                "WIMAD"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "sorts": {
+          "$id": "#/properties/requestBody/properties/sorts",
+          "type": "object",
+          "title": "The Sorts Schema",
+          "required": [
+            "buCode"
+          ],
+          "properties": {
+            "buCode": {
+              "$id": "#/properties/requestBody/properties/sorts/properties/buCode",
+              "type": "string",
+              "title": "The Bucode Schema",
+              "default": "",
+              "examples": [
+                "DESC"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        },
+        "pageSize": {
+          "$id": "#/properties/requestBody/properties/pageSize",
+          "type": "integer",
+          "title": "The Pagesize Schema",
+          "default": 0,
+          "examples": [
+            12
+          ]
+        },
+        "page": {
+          "$id": "#/properties/requestBody/properties/page",
+          "type": "integer",
+          "title": "The Page Schema",
+          "default": 0,
+          "examples": [
+            3
+          ]
+        }
+      }
+    }
+  }
+}

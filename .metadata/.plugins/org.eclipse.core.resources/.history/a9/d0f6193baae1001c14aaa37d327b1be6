@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.automation.base;
+
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class AssertListeners extends BaseTest{
+	
+	
+	ExtentReportFactory EF;
+	
+	
+	public AssertListeners(WebDriver driver) {
+		EF.getInstance().getExtent();
+		
+	}
+
+	
+	
+	
+
+}

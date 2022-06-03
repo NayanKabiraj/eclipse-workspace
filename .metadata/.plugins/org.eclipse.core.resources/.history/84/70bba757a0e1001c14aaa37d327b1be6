@@ -1,0 +1,41 @@
+package com.test.TestCases;
+
+
+import static org.testng.Assert.assertTrue;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+import com.automation.base.BaseTest;
+import com.fcom.pages.HomePage;
+import com.fcom.pages.LoginPage;
+import com.fcom.pages.SearchResultPage;
+ 
+
+public class HomePageTest extends BaseTest {
+	
+	
+	HomePage HP;
+	SearchResultPage SP ;
+	@Test()
+	public void verifyLoginPageElements() {
+		invokeApplication();
+		HP= page.getInstance(HomePage.class);
+		Assert.assertEquals(HP.getMyAccountLink().isDisplayed(), true, "Verify My Account link is displayed");
+		Assert.assertEquals(HP.getMyBranchLink().isDisplayed(), true, "Verify My Branch link is displayed");
+		Assert.assertEquals(HP.getMyCartLink().isDisplayed(), true, "Verify My cart link is displayed");
+		SP = HP.doSearch("Bolts");
+	}
+	
+	
+	
+	
+
+}

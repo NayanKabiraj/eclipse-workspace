@@ -1,0 +1,910 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "aggregations": {
+          "$id": "#/properties/responseBody/properties/aggregations",
+          "type": "array",
+          "title": "The Aggregations Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/aggregations/items",
+            "type": "object",
+            "title": "The Items Schema",           
+            "properties": {
+              "name": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "shippingCity"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "docCount": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/docCount",
+                "type": "integer",
+                "title": "The Doccount Schema",
+                "default": 0,
+                "examples": [
+                  2
+                ]
+              },
+              "buckets": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets",
+                "type": "array",
+                "title": "The Buckets Schema",
+                "items": {
+                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items",
+                  "type": "object",
+                  "title": "The Items Schema",                  
+                  "properties": {
+                    "name": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/name",
+                      "type": "string",
+                      "title": "The Name Schema",
+                      "default": "",
+                      "examples": [
+                        "INDIANAPOLIS"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "docCount": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/docCount",
+                      "type": "integer",
+                      "title": "The Doccount Schema",
+                      "default": 0,
+                      "examples": [
+                        9
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "billingAddress1": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingAddress1",
+                "type": "string",
+                "title": "The Billingaddress1 Schema",
+                "default": "",
+                "examples": [
+                  "5336 W 79TH ST"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingCity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingCity",
+                "type": "string",
+                "title": "The Billingcity Schema",
+                "default": "",
+                "examples": [
+                  "INDIANAPOLIS"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingCountryCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingCountryCode",
+                "type": "string",
+                "title": "The Billingcountrycode Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingCounty": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingCounty",
+                "type": "string",
+                "title": "The Billingcounty Schema",
+                "default": "",
+                "examples": [
+                  "Marion"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingCreatorId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingCreatorId",
+                "type": "string",
+                "title": "The Billingcreatorid Schema",
+                "default": "",
+                "examples": [
+                  "ININ3"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingDescription",
+                "type": "string",
+                "title": "The Billingdescription Schema",
+                "default": "",
+                "examples": [
+                  "5336 W 79TH ST"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingFax": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingFax",
+                "type": "string",
+                "title": "The Billingfax Schema",
+                "default": "",
+                "examples": [
+                  "317-337-0925"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingPhone": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingPhone",
+                "type": "string",
+                "title": "The Billingphone Schema",
+                "default": "",
+                "examples": [
+                  "317-337-0924"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingPostalCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingPostalCode",
+                "type": "string",
+                "title": "The Billingpostalcode Schema",
+                "default": "",
+                "examples": [
+                  "46268-1631"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingStateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingStateCode",
+                "type": "string",
+                "title": "The Billingstatecode Schema",
+                "default": "",
+                "examples": [
+                  "IN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCode",
+                "type": "string",
+                "title": "The Bucode Schema",
+                "default": "",
+                "examples": [
+                  "ININ3"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buCountry": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCountry",
+                "type": "string",
+                "title": "The Bucountry Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buStateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buStateCode",
+                "type": "string",
+                "title": "The Bustatecode Schema",
+                "default": "",
+                "examples": [
+                  "IN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "creditLimit": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/creditLimit",
+                "type": "string",
+                "title": "The Creditlimit Schema",
+                "default": "",
+                "examples": [
+                  "1000.0"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "currencyCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/currencyCode",
+                "type": "string",
+                "title": "The Currencycode Schema",
+                "default": "",
+                "examples": [
+                  "USD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerNumber",
+                "type": "string",
+                "title": "The Customernumber Schema",
+                "default": "",
+                "examples": [
+                  "ININ30242"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerPOSNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerPOSNumber",
+                "type": "string",
+                "title": "The Customerposnumber Schema",
+                "default": "",
+                "examples": [
+                  "IHIN0242"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "district": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/district",
+                "type": "string",
+                "title": "The District Schema",
+                "default": "",
+                "examples": [
+                  "01D0502"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "districtManagerEmployeeId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/districtManagerEmployeeId",
+                "type": "integer",
+                "title": "The Districtmanageremployeeid Schema",
+                "default": 0,
+                "examples": [
+                  56669
+                ]
+              },
+              "districtManagerEmployeeName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/districtManagerEmployeeName",
+                "type": "string",
+                "title": "The Districtmanageremployeename Schema",
+                "default": "",
+                "examples": [
+                  "Justin Vela"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "fourLetterBuCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/fourLetterBuCode",
+                "type": "string",
+                "title": "The Fourletterbucode Schema",
+                "default": "",
+                "examples": [
+                  "IHIN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "hasContract": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/hasContract",
+                "type": "boolean",
+                "title": "The Hascontract Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "held30Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/held30Days",
+                "type": "integer",
+                "title": "The Held30days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "held60Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/held60Days",
+                "type": "integer",
+                "title": "The Held60days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "held90Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/held90Days",
+                "type": "integer",
+                "title": "The Held90days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "heldAll": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/heldAll",
+                "type": "integer",
+                "title": "The Heldall Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "heldOld": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/heldOld",
+                "type": "integer",
+                "title": "The Heldold Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "isActive": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isActive",
+                "type": "boolean",
+                "title": "The Isactive Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "isBankrupt": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isBankrupt",
+                "type": "boolean",
+                "title": "The Isbankrupt Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isEdi": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isEdi",
+                "type": "boolean",
+                "title": "The Isedi Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isFastConnect": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isFastConnect",
+                "type": "boolean",
+                "title": "The Isfastconnect Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isFastenalManagedInventory": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isFastenalManagedInventory",
+                "type": "boolean",
+                "title": "The Isfastenalmanagedinventory Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isKeyAccount": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isKeyAccount",
+                "type": "boolean",
+                "title": "The Iskeyaccount Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isLinked": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isLinked",
+                "type": "boolean",
+                "title": "The Islinked Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isLocked": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isLocked",
+                "type": "boolean",
+                "title": "The Islocked Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isProspect": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isProspect",
+                "type": "boolean",
+                "title": "The Isprospect Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isVending": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isVending",
+                "type": "boolean",
+                "title": "The Isvending Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isWeb": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isWeb",
+                "type": "boolean",
+                "title": "The Isweb Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "lastModifyDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastModifyDate",
+                "type": "string",
+                "title": "The Lastmodifydate Schema",
+                "default": "",
+                "examples": [
+                  "2019-06-18T17:25:51"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "lastPaymentAmount": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastPaymentAmount",
+                "type": "string",
+                "title": "The Lastpaymentamount Schema",
+                "default": "",
+                "examples": [
+                  "43.3"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "lastPaymentDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastPaymentDate",
+                "type": "string",
+                "title": "The Lastpaymentdate Schema",
+                "default": "",
+                "examples": [
+                  "2007-04-23"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficeAddress1": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficeAddress1",
+                "type": "string",
+                "title": "The Mainofficeaddress1 Schema",
+                "default": "",
+                "examples": [
+                  "5338 W. 79TH ST."
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficeCity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficeCity",
+                "type": "string",
+                "title": "The Mainofficecity Schema",
+                "default": "",
+                "examples": [
+                  "INDIANAPOLIS"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficeCountryCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficeCountryCode",
+                "type": "string",
+                "title": "The Mainofficecountrycode Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficeCounty": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficeCounty",
+                "type": "string",
+                "title": "The Mainofficecounty Schema",
+                "default": "",
+                "examples": [
+                  "Marion"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficeCreatorId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficeCreatorId",
+                "type": "string",
+                "title": "The Mainofficecreatorid Schema",
+                "default": "",
+                "examples": [
+                  "ININ3"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficeDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficeDescription",
+                "type": "string",
+                "title": "The Mainofficedescription Schema",
+                "default": "",
+                "examples": [
+                  "Main Office"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficeFax": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficeFax",
+                "type": "string",
+                "title": "The Mainofficefax Schema",
+                "default": "",
+                "examples": [
+                  "317-337-0925"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficePhone": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficePhone",
+                "type": "string",
+                "title": "The Mainofficephone Schema",
+                "default": "",
+                "examples": [
+                  "317-337-0924"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficePostalCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficePostalCode",
+                "type": "string",
+                "title": "The Mainofficepostalcode Schema",
+                "default": "",
+                "examples": [
+                  "46268"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "mainOfficeStateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/mainOfficeStateCode",
+                "type": "string",
+                "title": "The Mainofficestatecode Schema",
+                "default": "",
+                "examples": [
+                  "IN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "monthers": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/monthers",
+                "type": "string",
+                "title": "The Monthers Schema",
+                "default": "",
+                "examples": [
+                  "0"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "name": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "POWER TEST LLC"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "openBalance": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalance",
+                "type": "number",
+                "title": "The Openbalance Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openBalance30Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalance30Days",
+                "type": "integer",
+                "title": "The Openbalance30days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openBalance60Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalance60Days",
+                "type": "integer",
+                "title": "The Openbalance60days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openBalance90Days": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalance90Days",
+                "type": "integer",
+                "title": "The Openbalance90days Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openBalanceOld": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalanceOld",
+                "type": "integer",
+                "title": "The Openbalanceold Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "openDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openDate",
+                "type": "string",
+                "title": "The Opendate Schema",
+                "default": "",
+                "examples": [
+                  "2001-11-08"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "paymentTerms": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/paymentTerms",
+                "type": "string",
+                "title": "The Paymentterms Schema",
+                "default": "",
+                "examples": [
+                  "NET30"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "region": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/region",
+                "type": "string",
+                "title": "The Region Schema",
+                "default": "",
+                "examples": [
+                  "01R1500"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "regionalVicePresidentEmployeeId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/regionalVicePresidentEmployeeId",
+                "type": "integer",
+                "title": "The Regionalvicepresidentemployeeid Schema",
+                "default": 0,
+                "examples": [
+                  2000
+                ]
+              },
+              "regionalVicePresidentEmployeeName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/regionalVicePresidentEmployeeName",
+                "type": "string",
+                "title": "The Regionalvicepresidentemployeename Schema",
+                "default": "",
+                "examples": [
+                  "Randy (RVP) Miller"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "sevenLetterBuCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sevenLetterBuCode",
+                "type": "string",
+                "title": "The Sevenletterbucode Schema",
+                "default": "",
+                "examples": [
+                  "01ININ3"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingAddress1": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingAddress1",
+                "type": "string",
+                "title": "The Shippingaddress1 Schema",
+                "default": "",
+                "examples": [
+                  "5338 W. 79TH ST."
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingCity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingCity",
+                "type": "string",
+                "title": "The Shippingcity Schema",
+                "default": "",
+                "examples": [
+                  "INDIANAPOLIS"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingCountryCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingCountryCode",
+                "type": "string",
+                "title": "The Shippingcountrycode Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingCounty": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingCounty",
+                "type": "string",
+                "title": "The Shippingcounty Schema",
+                "default": "",
+                "examples": [
+                  "Marion"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingCreatorId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingCreatorId",
+                "type": "string",
+                "title": "The Shippingcreatorid Schema",
+                "default": "",
+                "examples": [
+                  "ININ3"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingDescription",
+                "type": "string",
+                "title": "The Shippingdescription Schema",
+                "default": "",
+                "examples": [
+                  "Main Office"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingFax": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingFax",
+                "type": "string",
+                "title": "The Shippingfax Schema",
+                "default": "",
+                "examples": [
+                  "317-337-0925"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingPhone": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingPhone",
+                "type": "string",
+                "title": "The Shippingphone Schema",
+                "default": "",
+                "examples": [
+                  "317-337-0924"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingPostalCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingPostalCode",
+                "type": "string",
+                "title": "The Shippingpostalcode Schema",
+                "default": "",
+                "examples": [
+                  "46268"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingStateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingStateCode",
+                "type": "string",
+                "title": "The Shippingstatecode Schema",
+                "default": "",
+                "examples": [
+                  "IN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "syncToMobileApps": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/syncToMobileApps",
+                "type": "boolean",
+                "title": "The Synctomobileapps Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "tier": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/tier",
+                "type": "integer",
+                "title": "The Tier Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "accountType": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/accountType",
+                "type": "string",
+                "title": "The Accounttype Schema",
+                "default": "",
+                "examples": [
+                  "SML"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerDetails"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",
+      "required": [
+        "parameters"
+      ],
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",
+          "required": [
+            "query"
+          ],
+          "properties": {
+            "query": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/query",
+              "type": "string",
+              "title": "The Query Schema",
+              "default": "",
+              "examples": [
+                "test"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "billingCity": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/billingCity",
+              "type": "string",
+              "title": "The Billingcity Schema",
+              "default": "",
+              "examples": [
+                "INDIANAPOLIS"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.automation.base;
+
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class AssertListeners  {
+	
+	
+	ExtentReportFactory EF;
+	
+	
+	public AssertListeners(WebDriver driver) {
+		EF.getInstance().getExtent();
+	}
+	
+	
+	public static void verifyTrue()
+	
+
+	
+	
+	
+
+}

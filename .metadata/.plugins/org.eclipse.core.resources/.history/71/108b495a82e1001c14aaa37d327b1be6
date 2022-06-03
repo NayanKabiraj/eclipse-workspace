@@ -1,0 +1,8 @@
+package com.fcom.pages;
+
+import com.automation.base.Action;
+
+public class HomePage extends Action{
+
+}
+  

@@ -1,0 +1,51 @@
+package com.guiautomation.Base;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+public class Action extends ActionBase{
+	
+	
+	public Action(WebDriver driver) {
+		super(driver);
+	}
+
+	@Override
+	public String getPageTitle() {
+		return driver.getTitle();
+	}
+
+	@Override
+	public WebElement getElement(By locator) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		return driver.findElement(locator);
+	}
+
+	@Override
+	public void waitforElementPresent(By locator) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		
+	}
+
+	@Override
+	public void waitForPageTitle(String title) {
+		wait.until(ExpectedConditions.titleContains(title));
+		
+	}
+
+	@Override
+	public void clickLinkByName(String linkName) {
+		
+		
+	}
+
+	
+
+	
+
+	
+
+}

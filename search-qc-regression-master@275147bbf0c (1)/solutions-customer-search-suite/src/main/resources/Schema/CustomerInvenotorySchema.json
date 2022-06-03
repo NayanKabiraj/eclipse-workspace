@@ -1,0 +1,323 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "aggregations": {
+          "$id": "#/properties/responseBody/properties/aggregations",
+          "type": "array",
+          "title": "The Aggregations Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/aggregations/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "name": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "salesChannels"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "docCount": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/docCount",
+                "type": "integer",
+                "title": "The Doccount Schema",
+                "default": 0,
+                "examples": [
+                  2
+                ]
+              },
+              "buckets": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets",
+                "type": "array",
+                "title": "The Buckets Schema",
+                "items": {
+                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items",
+                  "type": "object",
+                  "title": "The Items Schema",                  
+                  "properties": {
+                    "name": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/name",
+                      "type": "string",
+                      "title": "The Name Schema",
+                      "default": "",
+                      "examples": [
+                        "vending"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "docCount": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/docCount",
+                      "type": "integer",
+                      "title": "The Doccount Schema",
+                      "default": 0,
+                      "examples": [
+                        335
+                      ]
+                    },
+                    "subAggregations": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations",
+                      "type": "array",
+                      "title": "The Subaggregations Schema",
+                      "items": {
+                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items",
+                        "type": "object",
+                        "title": "The Items Schema",                        
+                        "properties": {
+                          "name": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/name",
+                            "type": "string",
+                            "title": "The Name Schema",
+                            "default": "",
+                            "examples": [
+                              "distinctSKUs"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "metric": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/metric",
+                            "type": "integer",
+                            "title": "The Metric Schema",
+                            "default": 0,
+                            "examples": [
+                              142
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "addressName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/addressName",
+                "type": "string",
+                "title": "The Addressname Schema",
+                "default": "",
+                "examples": [
+                  "Pura Vida Main Building"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "addressOne": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/addressOne",
+                "type": "string",
+                "title": "The Addressone Schema",
+                "default": "",
+                "examples": [
+                  "66 5th St NW"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "buCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCode",
+                "type": "string",
+                "title": "The Bucode Schema",
+                "default": "",
+                "examples": [
+                  "GAAT7"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "city": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/city",
+                "type": "string",
+                "title": "The City Schema",
+                "default": "",
+                "examples": [
+                  "Atlanta"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "country": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/country",
+                "type": "string",
+                "title": "The Country Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerAddressId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerAddressId",
+                "type": "integer",
+                "title": "The Customeraddressid Schema",
+                "default": 0,
+                "examples": [
+                  1620713
+                ]
+              },
+              "customerLocationId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerLocationId",
+                "type": "integer",
+                "title": "The Customerlocationid Schema",
+                "default": 0,
+                "examples": [
+                  14490960
+                ]
+              },
+              "deviceName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/deviceName",
+                "type": "string",
+                "title": "The Devicename Schema",
+                "default": "",
+                "examples": [
+                  "Building 1-Machine 1"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "deviceSerialNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/deviceSerialNumber",
+                "type": "string",
+                "title": "The Deviceserialnumber Schema",
+                "default": "",
+                "examples": [
+                  "000014664556"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "locationName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/locationName",
+                "type": "string",
+                "title": "The Locationname Schema",
+                "default": "",
+                "examples": [
+                  "Sugar Testing"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "qoh": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/qoh",
+                "type": "integer",
+                "title": "The Qoh Schema",
+                "default": 0,
+                "examples": [
+                  2
+                ]
+              },
+              "sku": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sku",
+                "type": "string",
+                "title": "The Sku Schema",
+                "default": "",
+                "examples": [
+                  "0120710"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "skuDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/skuDescription",
+                "type": "string",
+                "title": "The Skudescription Schema",
+                "default": "",
+                "examples": [
+                  "test"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "thumbnailUrl": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/thumbnailUrl",
+                "type": "string",
+                "title": "The Thumbnailurl Schema",
+                "default": "",
+                "examples": [
+                  "//imgtst2.fastenal.com/thumbnails/11121471.jpg"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerInventoryList"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",     
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",          
+          "properties": {
+            "customerId": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerId",
+              "type": "array",
+              "title": "The Customerid Schema",
+              "items": {
+                "$id": "#/properties/requestBody/properties/parameters/properties/customerId/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": [
+                  "GAAT70010"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

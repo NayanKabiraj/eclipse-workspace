@@ -1,0 +1,355 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "accountingDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/accountingDate",
+                "type": "string",
+                "title": "The Accountingdate Schema",
+                "default": "",
+                "examples": [
+                  "2015-08-21"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerNumber",
+                "type": "string",
+                "title": "The Customernumber Schema",
+                "default": "",
+                "examples": [
+                  "ABCAN0028"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerUOM": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerUOM",
+                "type": "string",
+                "title": "The Customeruom Schema",
+                "default": "",
+                "examples": [
+                  "C"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "entryType": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/entryType",
+                "type": "string",
+                "title": "The Entrytype Schema",
+                "default": "",
+                "examples": [
+                  "CG"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "folioNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/folioNumber",
+                "type": "integer",
+                "title": "The Folionumber Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "invoiceDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceDate",
+                "type": "string",
+                "title": "The Invoicedate Schema",
+                "default": "",
+                "examples": [
+                  "2015-08-21"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "invoiceItemId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceItemId",
+                "type": "string",
+                "title": "The Invoiceitemid Schema",
+                "default": "",
+                "examples": [
+                  "13202-00905"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "invoiceNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceNumber",
+                "type": "string",
+                "title": "The Invoicenumber Schema",
+                "default": "",
+                "examples": [
+                  "ABCAN6912"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isExclusiveBrand": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isExclusiveBrand",
+                "type": "boolean",
+                "title": "The Isexclusivebrand Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isStandard": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isStandard",
+                "type": "boolean",
+                "title": "The Isstandard Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "itemSeqNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/itemSeqNumber",
+                "type": "integer",
+                "title": "The Itemseqnumber Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "jobNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/jobNumber",
+                "type": "string",
+                "title": "The Jobnumber Schema",
+                "default": "",
+                "examples": [
+                  "Office Safety Supplies"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "lineNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lineNumber",
+                "type": "integer",
+                "title": "The Linenumber Schema",
+                "default": 0,
+                "examples": [
+                  3
+                ]
+              },
+              "ownerBuCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/ownerBuCode",
+                "type": "string",
+                "title": "The Ownerbucode Schema",
+                "default": "",
+                "examples": [
+                  "ABCAN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "poId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/poId",
+                "type": "string",
+                "title": "The Poid Schema",
+                "default": "",
+                "examples": [
+                  "CN7F2057"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "quantity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/quantity",
+                "type": "integer",
+                "title": "The Quantity Schema",
+                "default": 0,
+                "examples": [
+                  3
+                ]
+              },
+              "quantityBackOrder": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/quantityBackOrder",
+                "type": "integer",
+                "title": "The Quantitybackorder Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "quantityRequested": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/quantityRequested",
+                "type": "integer",
+                "title": "The Quantityrequested Schema",
+                "default": 0,
+                "examples": [
+                  3
+                ]
+              },
+              "quantityShipped": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/quantityShipped",
+                "type": "integer",
+                "title": "The Quantityshipped Schema",
+                "default": 0,
+                "examples": [
+                  3
+                ]
+              },
+              "shipToAddress1": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToAddress1",
+                "type": "string",
+                "title": "The Shiptoaddress1 Schema",
+                "default": "",
+                "examples": [
+                  "HWY 1A"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shipToCity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToCity",
+                "type": "string",
+                "title": "The Shiptocity Schema",
+                "default": "",
+                "examples": [
+                  "EXSHAW"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shipToName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToName",
+                "type": "string",
+                "title": "The Shiptoname Schema",
+                "default": "",
+                "examples": [
+                  "HUMBOLDT WEDAG INC"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shipToPostalCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToPostalCode",
+                "type": "string",
+                "title": "The Shiptopostalcode Schema",
+                "default": "",
+                "examples": [
+                  "T0L 2C0"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shipToStateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToStateCode",
+                "type": "string",
+                "title": "The Shiptostatecode Schema",
+                "default": "",
+                "examples": [
+                  "AB"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "taxableCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/taxableCode",
+                "type": "string",
+                "title": "The Taxablecode Schema",
+                "default": "",
+                "examples": [
+                  "T"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "unitPrice": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/unitPrice",
+                "type": "integer",
+                "title": "The Unitprice Schema",
+                "default": 0,
+                "examples": [
+                  3475
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "openInvoiceDetail"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",
+      "required": [
+        "parameters"
+      ],
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",
+          "required": [
+            "invoiceNumber",
+            "customerNumber"
+          ],
+          "properties": {
+            "invoiceNumber": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/invoiceNumber",
+              "type": "string",
+              "title": "The Invoicenumber Schema",
+              "default": "",
+              "examples": [
+                "ABCAN6912"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "customerNumber": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerNumber",
+              "type": "string",
+              "title": "The Customernumber Schema",
+              "default": "",
+              "examples": [
+                "ABCAN0028"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

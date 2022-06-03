@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.guiautomation.Base;
+
+import org.openqa.selenium.WebDriver;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class DriverFactory {
+	
+	
+	
+	private DriverFactory() {
+		
+	}
+	
+	
+	
+	ThreadLocal<WebDriver> driver= new ThreadLocal<WebDriver>();
+
+}

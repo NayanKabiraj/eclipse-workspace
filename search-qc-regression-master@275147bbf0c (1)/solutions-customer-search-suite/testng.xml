@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<listeners>
+		<listener
+			class-name="org.fastenal.common.utilities.Listener"></listener>
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="customerinventory.tests.CustomerInventorySuggestTests"/>
+      <class name="customerbusiness.tests.CustomerBusinessAggregationsTests"/>
+      <class name="customerinventory.tests.CustomerInventoryTests"/>
+      <class name="customerbusiness.tests.CustomerBusinessPlanogramTests"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

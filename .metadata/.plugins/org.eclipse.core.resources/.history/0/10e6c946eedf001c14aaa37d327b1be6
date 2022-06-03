@@ -1,0 +1,25 @@
+package com.test.TestCases;
+
+
+import java.util.Calendar;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.fcom.pages.LoginPage;
+import com.guiautomation.Base.BaseTest;
+
+public class LoginPageTest extends BaseTest {
+	
+	
+	LoginPage lp;
+	@Test()
+	public void verifyLoginPageElements() {
+		Calendar cal=Calendar.getInstance();
+		System.out.println(System.getProperty("user.dir")+"/ExtentReport/" +cal.DATE +"_"+cal.getTimeInMillis()+".html");
+	}
+	
+
+}

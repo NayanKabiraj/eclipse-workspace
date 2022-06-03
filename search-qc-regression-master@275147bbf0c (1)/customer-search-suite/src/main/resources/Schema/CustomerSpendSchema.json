@@ -1,0 +1,649 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "aggregations": {
+          "$id": "#/properties/responseBody/properties/aggregations",
+          "type": "array",
+          "title": "The Aggregations Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/aggregations/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "name": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "categoryOne"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "docCount": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/docCount",
+                "type": "integer",
+                "title": "The Doccount Schema",
+                "default": 0,
+                "examples": [
+                  2
+                ]
+              },
+              "buckets": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets",
+                "type": "array",
+                "title": "The Buckets Schema",
+                "items": {
+                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items",
+                  "type": "object",
+                  "title": "The Items Schema",                  
+                  "properties": {
+                    "name": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/name",
+                      "type": "string",
+                      "title": "The Name Schema",
+                      "default": "",
+                      "examples": [
+                        "Lifting and Rigging"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "docCount": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/docCount",
+                      "type": "integer",
+                      "title": "The Doccount Schema",
+                      "default": 0,
+                      "examples": [
+                        1
+                      ]
+                    },
+                    "subAggregations": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations",
+                      "type": "array",
+                      "title": "The Subaggregations Schema",
+                      "items": {
+                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items",
+                        "type": "object",
+                        "title": "The Items Schema",                       
+                        "properties": {
+                          "name": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/name",
+                            "type": "string",
+                            "title": "The Name Schema",
+                            "default": "",
+                            "examples": [
+                              "categoryTwo"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "docCount": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/docCount",
+                            "type": "integer",
+                            "title": "The Doccount Schema",
+                            "default": 0,
+                            "examples": [
+                              1
+                            ]
+                          },
+                          "buckets": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets",
+                            "type": "array",
+                            "title": "The Buckets Schema",
+                            "items": {
+                              "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items",
+                              "type": "object",
+                              "title": "The Items Schema",                             
+                              "properties": {
+                                "name": {
+                                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/name",
+                                  "type": "string",
+                                  "title": "The Name Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "Eye Bolts and Eye Nuts"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "docCount": {
+                                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/docCount",
+                                  "type": "integer",
+                                  "title": "The Doccount Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    1
+                                  ]
+                                },
+                                "subAggregations": {
+                                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations",
+                                  "type": "array",
+                                  "title": "The Subaggregations Schema",
+                                  "items": {
+                                    "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items",
+                                    "type": "object",
+                                    "title": "The Items Schema",                                    
+                                    "properties": {
+                                      "name": {
+                                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/name",
+                                        "type": "string",
+                                        "title": "The Name Schema",
+                                        "default": "",
+                                        "examples": [
+                                          "categoryThree"
+                                        ],
+                                        "pattern": "^(.*)$"
+                                      },
+                                      "docCount": {
+                                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/docCount",
+                                        "type": "integer",
+                                        "title": "The Doccount Schema",
+                                        "default": 0,
+                                        "examples": [
+                                          1
+                                        ]
+                                      },
+                                      "buckets": {
+                                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets",
+                                        "type": "array",
+                                        "title": "The Buckets Schema",
+                                        "items": {
+                                          "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items",
+                                          "type": "object",
+                                          "title": "The Items Schema",                                          
+                                          "properties": {
+                                            "name": {
+                                              "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/name",
+                                              "type": "string",
+                                              "title": "The Name Schema",
+                                              "default": "",
+                                              "examples": [
+                                                "Eye Bolts"
+                                              ],
+                                              "pattern": "^(.*)$"
+                                            },
+                                            "docCount": {
+                                              "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/docCount",
+                                              "type": "integer",
+                                              "title": "The Doccount Schema",
+                                              "default": 0,
+                                              "examples": [
+                                                1
+                                              ]
+                                            },
+                                            "subAggregations": {
+                                              "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations",
+                                              "type": "array",
+                                              "title": "The Subaggregations Schema",
+                                              "items": {
+                                                "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items",
+                                                "type": "object",
+                                                "title": "The Items Schema",                                                
+                                                "properties": {
+                                                  "name": {
+                                                    "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/name",
+                                                    "type": "string",
+                                                    "title": "The Name Schema",
+                                                    "default": "",
+                                                    "examples": [
+                                                      "extendedSales"
+                                                    ],
+                                                    "pattern": "^(.*)$"
+                                                  },
+                                                  "metric": {
+                                                    "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/metric",
+                                                    "type": "number",
+                                                    "title": "The Metric Schema",
+                                                    "default": 0.0,
+                                                    "examples": [
+                                                      1686.4
+                                                    ]
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "buCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCode",
+                "type": "string",
+                "title": "The Bucode Schema",
+                "default": "",
+                "examples": [
+                  "OHTO2"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryOne": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryOne",
+                "type": "string",
+                "title": "The Categoryone Schema",
+                "default": "",
+                "examples": [
+                  "Fasteners"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryThree": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryThree",
+                "type": "string",
+                "title": "The Categorythree Schema",
+                "default": "",
+                "examples": [
+                  "Cap Screws & Hex Bolts"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryTwo": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryTwo",
+                "type": "string",
+                "title": "The Categorytwo Schema",
+                "default": "",
+                "examples": [
+                  "Bolts"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "channel": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/channel",
+                "type": "string",
+                "title": "The Channel Schema",
+                "default": "",
+                "examples": [
+                  "F2F"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "controlNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/controlNumber",
+                "type": "string",
+                "title": "The Controlnumber Schema",
+                "default": "",
+                "examples": [
+                  "240138619"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerId",
+                "type": "string",
+                "title": "The Customerid Schema",
+                "default": "",
+                "examples": [
+                  "OHTO22787"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerPoNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerPoNumber",
+                "type": "string",
+                "title": "The Customerponumber Schema",
+                "default": "",
+                "examples": [
+                  "9417"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "employeeId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/employeeId",
+                "type": "string",
+                "title": "The Employeeid Schema",
+                "default": "",
+                "examples": [
+                  "0090570"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "employeeName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/employeeName",
+                "type": "string",
+                "title": "The Employeename Schema",
+                "default": "",
+                "examples": [
+                  "Stoldt,Tyler Richard"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "extendedSales": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/extendedSales",
+                "type": "number",
+                "title": "The Extendedsales Schema",
+                "default": 0.0,
+                "examples": [
+                  19.448
+                ]
+              },
+              "hasExclusiveBrandAlternative": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/hasExclusiveBrandAlternative",
+                "type": "integer",
+                "title": "The Hasexclusivebrandalternative Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "invoiceDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceDate",
+                "type": "string",
+                "title": "The Invoicedate Schema",
+                "default": "",
+                "examples": [
+                  "2018-05-10"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "invoiceNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceNumber",
+                "type": "string",
+                "title": "The Invoicenumber Schema",
+                "default": "",
+                "examples": [
+                  "OHTO2139143"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "invoiceSequenceNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceSequenceNumber",
+                "type": "integer",
+                "title": "The Invoicesequencenumber Schema",
+                "default": 0,
+                "examples": [
+                  2
+                ]
+              },
+              "isExclusiveBrand": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isExclusiveBrand",
+                "type": "boolean",
+                "title": "The Isexclusivebrand Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isStandard": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isStandard",
+                "type": "boolean",
+                "title": "The Isstandard Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "isUnderFifteen": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isUnderFifteen",
+                "type": "boolean",
+                "title": "The Isunderfifteen Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isUnderTwenty": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isUnderTwenty",
+                "type": "boolean",
+                "title": "The Isundertwenty Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isVendingCustomer": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isVendingCustomer",
+                "type": "boolean",
+                "title": "The Isvendingcustomer Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "qtySold": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/qtySold",
+                "type": "integer",
+                "title": "The Qtysold Schema",
+                "default": 0,
+                "examples": [
+                  10
+                ]
+              },
+              "salePrice": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/salePrice",
+                "type": "number",
+                "title": "The Saleprice Schema",
+                "default": 0.0,
+                "examples": [
+                  1.9448
+                ]
+              },
+              "shippingAddress": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingAddress",
+                "type": "string",
+                "title": "The Shippingaddress Schema",
+                "default": "",
+                "examples": [
+                  "240 W ANDRUS RD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingAddressFull": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingAddressFull",
+                "type": "string",
+                "title": "The Shippingaddressfull Schema",
+                "default": "",
+                "examples": [
+                  "240 W ANDRUS RD, NORTHWOOD, OH, USA, 43619-1206."
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingCity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingCity",
+                "type": "string",
+                "title": "The Shippingcity Schema",
+                "default": "",
+                "examples": [
+                  "NORTHWOOD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingCountry": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingCountry",
+                "type": "string",
+                "title": "The Shippingcountry Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingCustomerName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingCustomerName",
+                "type": "string",
+                "title": "The Shippingcustomername Schema",
+                "default": "",
+                "examples": [
+                  "AUTO TRONIC CONTROL CO"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingState": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingState",
+                "type": "string",
+                "title": "The Shippingstate Schema",
+                "default": "",
+                "examples": [
+                  "OH"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shippingZipCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shippingZipCode",
+                "type": "string",
+                "title": "The Shippingzipcode Schema",
+                "default": "",
+                "examples": [
+                  "43619-1206"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "sku": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sku",
+                "type": "string",
+                "title": "The Sku Schema",
+                "default": "",
+                "examples": [
+                  "0115123"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "skuDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/skuDescription",
+                "type": "string",
+                "title": "The Skudescription Schema",
+                "default": "",
+                "examples": [
+                  "3/8\"-16 x 5\" Yellow Zinc Finish SAE J429 Grade 8 Hex Cap Screw"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "thumbnailUrl": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/thumbnailUrl",
+                "type": "string",
+                "title": "The Thumbnailurl Schema",
+                "default": "",
+                "examples": [
+                  "https://imgtst3.fastenal.com/thumbnails/15011.jpg"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "totalCost": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/totalCost",
+                "type": "number",
+                "title": "The Totalcost Schema",
+                "default": 0.0,
+                "examples": [
+                  0.239772
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerSpend"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",      
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",          
+          "properties": {
+            "customerId": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerId",
+              "type": "array",
+              "title": "The Customerid Schema",
+              "items": {
+                "$id": "#/properties/requestBody/properties/parameters/properties/customerId/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": [
+                  "OHTO22787"
+                ],
+                "pattern": "^(.*)$"
+              }
+            },
+            "startDate": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/startDate",
+              "type": "string",
+              "title": "The Startdate Schema",
+              "default": "",
+              "examples": [
+                "2018-04-01"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "endDate": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/endDate",
+              "type": "string",
+              "title": "The Enddate Schema",
+              "default": "",
+              "examples": [
+                "2018-06-01"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

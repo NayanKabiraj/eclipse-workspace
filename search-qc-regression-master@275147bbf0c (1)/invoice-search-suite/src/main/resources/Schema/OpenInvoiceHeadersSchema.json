@@ -1,0 +1,490 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",           
+            "properties": {
+              "address1": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/address1",
+                "type": "string",
+                "title": "The Address1 Schema",
+                "default": "",
+                "examples": [
+                  "Fastenal Canada"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "address2": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/address2",
+                "type": "string",
+                "title": "The Address2 Schema",
+                "default": "",
+                "examples": [
+                  "900 Wabanaki Dr"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "billingTypeId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/billingTypeId",
+                "type": "integer",
+                "title": "The Billingtypeid Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "city": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/city",
+                "type": "string",
+                "title": "The City Schema",
+                "default": "",
+                "examples": [
+                  "Kitchener"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "countryCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/countryCode",
+                "type": "string",
+                "title": "The Countrycode Schema",
+                "default": "",
+                "examples": [
+                  "CAN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "currencyCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/currencyCode",
+                "type": "string",
+                "title": "The Currencycode Schema",
+                "default": "",
+                "examples": [
+                  "CAD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerName",
+                "type": "string",
+                "title": "The Customername Schema",
+                "default": "",
+                "examples": [
+                  "SUNCOR ENERGY - FIREBAG"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerNumber",
+                "type": "string",
+                "title": "The Customernumber Schema",
+                "default": "",
+                "examples": [
+                  "AB0020001"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerPONumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerPONumber",
+                "type": "string",
+                "title": "The Customerponumber Schema",
+                "default": "",
+                "examples": [
+                  "4700000226"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerUOM": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerUOM",
+                "type": "string",
+                "title": "The Customeruom Schema",
+                "default": "",
+                "examples": [
+                  "C"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "daysFromInvoice": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/daysFromInvoice",
+                "type": "integer",
+                "title": "The Daysfrominvoice Schema",
+                "default": 0,
+                "examples": [
+                  1366
+                ]
+              },
+              "daysPastDue": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/daysPastDue",
+                "type": "integer",
+                "title": "The Dayspastdue Schema",
+                "default": 0,
+                "examples": [
+                  1336
+                ]
+              },
+              "dueDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/dueDate",
+                "type": "string",
+                "title": "The Duedate Schema",
+                "default": "",
+                "examples": [
+                  "2015-07-30"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "entryType": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/entryType",
+                "type": "string",
+                "title": "The Entrytype Schema",
+                "default": "",
+                "examples": [
+                  "CG"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "financialCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/financialCode",
+                "type": "string",
+                "title": "The Financialcode Schema",
+                "default": "",
+                "examples": [
+                  "FCCAN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "freight": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/freight",
+                "type": "number",
+                "title": "The Freight Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "invoiceDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceDate",
+                "type": "string",
+                "title": "The Invoicedate Schema",
+                "default": "",
+                "examples": [
+                  "2015-06-30"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "invoiceNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceNumber",
+                "type": "string",
+                "title": "The Invoicenumber Schema",
+                "default": "",
+                "examples": [
+                  "AB0025054"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "jobNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/jobNumber",
+                "type": "string",
+                "title": "The Jobnumber Schema",
+                "default": "",
+                "examples": [
+                  "1207084"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "openBalance": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openBalance",
+                "type": "number",
+                "title": "The Openbalance Schema",
+                "default": 0.0,
+                "examples": [
+                  22.05
+                ]
+              },
+              "openSubTotal": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/openSubTotal",
+                "type": "number",
+                "title": "The Opensubtotal Schema",
+                "default": 0,
+                "examples": [
+                  21
+                ]
+              },
+              "ownerBuCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/ownerBuCode",
+                "type": "string",
+                "title": "The Ownerbucode Schema",
+                "default": "",
+                "examples": [
+                  "AB002"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "postalCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/postalCode",
+                "type": "string",
+                "title": "The Postalcode Schema",
+                "default": "",
+                "examples": [
+                  "N2C 0B7"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "psGroupId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/psGroupId",
+                "type": "string",
+                "title": "The Psgroupid Schema",
+                "default": "",
+                "examples": [
+                  "58675946"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "restockFee": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/restockFee",
+                "type": "number",
+                "title": "The Restockfee Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "shipToAddress1": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToAddress1",
+                "type": "string",
+                "title": "The Shiptoaddress1 Schema",
+                "default": "",
+                "examples": [
+                  "Suncor Firebag Warehouse"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shipToAddress2": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToAddress2",
+                "type": "string",
+                "title": "The Shiptoaddress2 Schema",
+                "default": "",
+                "examples": [
+                  "Firebag Dock X, Drop 010"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shipToCity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToCity",
+                "type": "string",
+                "title": "The Shiptocity Schema",
+                "default": "",
+                "examples": [
+                  "FORT MCMURRAY"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shipToName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToName",
+                "type": "string",
+                "title": "The Shiptoname Schema",
+                "default": "",
+                "examples": [
+                  "Picked up at branch"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shipToPostalCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToPostalCode",
+                "type": "string",
+                "title": "The Shiptopostalcode Schema",
+                "default": "",
+                "examples": [
+                  "T9H 3E3"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "shipToStateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/shipToStateCode",
+                "type": "string",
+                "title": "The Shiptostatecode Schema",
+                "default": "",
+                "examples": [
+                  "AB"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "stateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/stateCode",
+                "type": "string",
+                "title": "The Statecode Schema",
+                "default": "",
+                "examples": [
+                  "ON"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "subtotal": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/subtotal",
+                "type": "number",
+                "title": "The Subtotal Schema",
+                "default": 0,
+                "examples": [
+                  21
+                ]
+              },
+              "tax": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/tax",
+                "type": "number",
+                "title": "The Tax Schema",
+                "default": 0.0,
+                "examples": [
+                  1.05
+                ]
+              },
+              "tax1Amount": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/tax1Amount",
+                "type": "number",
+                "title": "The Tax1amount Schema",
+                "default": 0.0,
+                "examples": [
+                  1.05
+                ]
+              },
+              "tax1Label": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/tax1Label",
+                "type": "string",
+                "title": "The Tax1label Schema",
+                "default": "",
+                "examples": [
+                  "GST / TPS"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "tax2Amount": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/tax2Amount",
+                "type": "number",
+                "title": "The Tax2amount Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "tax3Amount": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/tax3Amount",
+                "type": "number",
+                "title": "The Tax3amount Schema",
+                "default": 0,
+                "examples": [
+                  0
+                ]
+              },
+              "termsDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/termsDescription",
+                "type": "string",
+                "title": "The Termsdescription Schema",
+                "default": "",
+                "examples": [
+                  "Net 60"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "termsPaymentDays": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/termsPaymentDays",
+                "type": "integer",
+                "title": "The Termspaymentdays Schema",
+                "default": 0,
+                "examples": [
+                  60
+                ]
+              },
+              "total": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/total",
+                "type": "number",
+                "title": "The Total Schema",
+                "default": 0.0,
+                "examples": [
+                  22.05
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "openInvoiceHeader"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",
+      "required": [
+        "parameters"
+      ],
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",
+          "required": [
+            "customerNumber"
+          ],
+          "properties": {
+            "customerNumber": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerNumber",
+              "type": "string",
+              "title": "The Customernumber Schema",
+              "default": "",
+              "examples": [
+                "AB0020001"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

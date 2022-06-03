@@ -1,0 +1,67 @@
+package com.fcom.pages;
+import com.common.utils.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.guiautomation.Base.Action;
+import com.guiautomation.Base.Page;
+import com.guiautomation.Base.BasePage;
+
+public class LoginPage extends Action{
+	
+	private By TXT_username=By.id("username");
+	private By TXT_password=By.id("password");
+	
+	
+	public By getTXT_password() {
+		return TXT_password;
+	}
+
+
+
+
+
+	public void setTXT_password(By tXT_password) {
+		TXT_password = tXT_password;
+	}
+
+
+
+
+
+
+
+	public LoginPage(WebDriver driver) {
+		super(driver);
+	}
+
+	
+	
+	
+	
+	
+	
+	public WebElement getName() {
+
+		return getElement(TXT_username);
+	}
+	
+	public WebElement getPassword() {
+		return getElement(TXT_password);
+	}
+	
+	public String getLoginPageTitle() {
+		return getPageTitle();
+	}
+	
+	public void doLogin(String username,  String Pass) {
+		getName().sendKeys(username);
+		getPassword().sendKeys(Pass);
+	}
+
+}
+ 

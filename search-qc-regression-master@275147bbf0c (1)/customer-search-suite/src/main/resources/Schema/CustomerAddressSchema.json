@@ -1,0 +1,334 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",
+            "properties": {
+              "addressOne": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/addressOne",
+                "type": "string",
+                "title": "The Addressone Schema",
+                "default": "",
+                "examples": [
+                  "4025 Woodland Park Blvd. #410"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "city": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/city",
+                "type": "string",
+                "title": "The City Schema",
+                "default": "",
+                "examples": [
+                  "Arlington"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "cityLocalityId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/cityLocalityId",
+                "type": "integer",
+                "title": "The Citylocalityid Schema",
+                "default": 0,
+                "examples": [
+                  241801
+                ]
+              },
+              "county": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/county",
+                "type": "string",
+                "title": "The County Schema",
+                "default": "",
+                "examples": [
+                  "Tarrant"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "countryCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/countryCode",
+                "type": "string",
+                "title": "The Countrycode Schema",
+                "default": "",
+                "examples": [
+                  "USA"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "creatorId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/creatorId",
+                "type": "string",
+                "title": "The Creatorid Schema",
+                "default": "",
+                "examples": [
+                  "NJMID"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerAddressId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerAddressId",
+                "type": "integer",
+                "title": "The Customeraddressid Schema",
+                "default": 0,
+                "examples": [
+                  1277929
+                ]
+              },
+              "customerNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerNumber",
+                "type": "string",
+                "title": "The Customernumber Schema",
+                "default": "",
+                "examples": [
+                  "NJMID8232"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerName",
+                "type": "string",
+                "title": "The Customername Schema",
+                "default": "",
+                "examples": [
+                  "KINLEY CONSTRUCTION GROUP, LTD"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "description": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/description",
+                "type": "string",
+                "title": "The Description Schema",
+                "default": "",
+                "examples": [
+                  "Unknown"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "fax": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/fax",
+                "type": "string",
+                "title": "The Fax Schema",
+                "default": "",
+                "examples": [
+                  "817-860-1753"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isActive": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isActive",
+                "type": "boolean",
+                "title": "The Isactive Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "isDefaultBilling": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isDefaultBilling",
+                "type": "boolean",
+                "title": "The Isdefaultbilling Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isDefaultMainOffice": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isDefaultMainOffice",
+                "type": "boolean",
+                "title": "The Isdefaultmainoffice Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isDefaultShipping": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isDefaultShipping",
+                "type": "boolean",
+                "title": "The Isdefaultshipping Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "isOutsideCityLimits": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isOutsideCityLimits",
+                "type": "boolean",
+                "title": "The Isoutsidecitylimits Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "isResidential": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isResidential",
+                "type": "boolean",
+                "title": "The Isresidential Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "latlon": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/latlon",
+                "type": "object",
+                "title": "The Latlon Schema",
+                "required": [
+                  "lat",
+                  "lon"
+                ],
+                "properties": {
+                  "lat": {
+                    "$id": "#/properties/responseBody/properties/data/items/properties/latlon/properties/lat",
+                    "type": "number",
+                    "title": "The Lat Schema",
+                    "default": 0.0,
+                    "examples": [
+                      32.714596
+                    ]
+                  },
+                  "lon": {
+                    "$id": "#/properties/responseBody/properties/data/items/properties/latlon/properties/lon",
+                    "type": "number",
+                    "title": "The Lon Schema",
+                    "default": 0.0,
+                    "examples": [
+                      -97.170632
+                    ]
+                  }
+                }
+              },
+              "ownerBu": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/ownerBu",
+                "type": "string",
+                "title": "The Ownerbu Schema",
+                "default": "",
+                "examples": [
+                  "NJMID"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "phone": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/phone",
+                "type": "string",
+                "title": "The Phone Schema",
+                "default": "",
+                "examples": [
+                  "817-461-2100"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "posCustomerAddressId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/posCustomerAddressId",
+                "type": "integer",
+                "title": "The Poscustomeraddressid Schema",
+                "default": 0,
+                "examples": [
+                  2640
+                ]
+              },
+              "postalCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/postalCode",
+                "type": "string",
+                "title": "The Postalcode Schema",
+                "default": "",
+                "examples": [
+                  "76013"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "stateCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/stateCode",
+                "type": "string",
+                "title": "The Statecode Schema",
+                "default": "",
+                "examples": [
+                  "TX"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerAddress"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",
+      "required": [
+        "parameters"
+      ],
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",
+          "required": [
+            "customerNumber"
+          ],
+          "properties": {
+            "customerNumber": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerNumber",
+              "type": "string",
+              "title": "The Customernumber Schema",
+              "default": "",
+              "examples": [
+                "NJMID8232"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

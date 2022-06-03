@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-05-23T15:57:29 IST" name="Default suite" finished-at="2022-05-23T15:57:33 IST" duration-ms="4073">
+    <groups>
+    </groups>
+    <test started-at="2022-05-23T15:57:29 IST" name="Default test" finished-at="2022-05-23T15:57:33 IST" duration-ms="4073">
+      <class name="TestScenarios.DemoTest">
+        <test-method is-config="true" signature="beforetext()[pri:0, instance:TestScenarios.DemoTest@791f145a]" started-at="2022-05-23T15:57:29 IST" name="beforetext" finished-at="2022-05-23T15:57:32 IST" duration-ms="2663" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforetext -->
+        <test-method signature="searchOperation()[pri:0, instance:TestScenarios.DemoTest@791f145a]" started-at="2022-05-23T15:57:32 IST" name="searchOperation" finished-at="2022-05-23T15:57:33 IST" duration-ms="1241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchOperation -->
+        <test-method is-config="true" signature="aftertest()[pri:0, instance:TestScenarios.DemoTest@791f145a]" started-at="2022-05-23T15:57:33 IST" name="aftertest" finished-at="2022-05-23T15:57:33 IST" duration-ms="132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- aftertest -->
+      </class> <!-- TestScenarios.DemoTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

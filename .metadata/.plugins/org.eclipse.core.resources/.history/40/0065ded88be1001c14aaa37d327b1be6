@@ -1,0 +1,31 @@
+/**
+ * 
+ */
+package com.fcom.pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+import com.automation.base.Action;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class SearchResultPage extends Action{
+
+	
+	private By HEADER_searchResult=By.xpath("//div[contains(@class,'row font-weight-']");
+	
+	
+	
+	
+	public SearchResultPage(WebDriver driver) {
+		super(driver);
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+	
+	
+}

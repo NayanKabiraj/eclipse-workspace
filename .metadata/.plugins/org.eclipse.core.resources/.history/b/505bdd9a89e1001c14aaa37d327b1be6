@@ -1,0 +1,128 @@
+package com.automation.base;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+
+
+
+
+
+public class Action extends Page{
+	
+	ExtentTest EF= ExtentReportFactory.getInstance().getExtent();
+	
+	public Action(WebDriver driver ) {
+		super(driver);
+		EF=ExtentReportFactory.getInstance().getExtent();
+	}
+	
+	
+	
+	public void performClick(By locator,String logicalName) {
+		getElement(locator).click();
+		try {
+			EF.log(Status.PASS, "Click on " + logicalName);
+		}catch(Exception e) {
+			EF.log(Status.FAIL, "Click on " + logicalName);
+		}
+	}
+	
+	
+	public void performSendKeys(WebElement obj,String value, String logicalName) {
+		obj.sendKeys(value);
+		try {
+			EF.log(Status.PASS, "Type " + value + " on " + logicalName);
+		}catch(Exception e) {
+			EF.log(Status.FAIL, "Type " + value + " on " + logicalName);
+		}
+	}
+
+	 
+	/************************************************************************************
+		* METHOD NAME--getPageTitle	 PACKAGE--com.automation.base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @return
+	
+	*************************************************************************************/
+	@Override
+	public String getPageTitle() {
+		return driver.getTitle();
+		
+	}
+
+	/************************************************************************************
+		* METHOD NAME--getElement	 PACKAGE--com.automation.base 
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param locator
+		* @return
+	
+	*************************************************************************************/
+	@Override
+	public WebElement getElement(By locator) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		try {
+			EF.log(Status.PASS, locator + " found successfully");
+			return driver.findElement(locator);
+		}catch(Exception e) {
+			EF.log(Status.PASS, locator + " found successfully");
+			return null;
+		}
+		
+	}
+
+	
+	/************************************************************************************
+		* METHOD NAME--waitforElementPresent	 PACKAGE--com.automation.base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param locator
+	
+	*************************************************************************************/
+	@Override
+	public void waitforElementPresent(By locator) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		
+	}
+	
+	/************************************************************************************
+		* METHOD NAME--waitForPageTitle	 PACKAGE--com.automation.base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param title
+	
+	*************************************************************************************/
+	@Override
+	public void waitForPageTitle(String title) {
+		wait.until(ExpectedConditions.titleContains(title));
+		
+	}
+
+	/************************************************************************************
+		* METHOD NAME--clickLinkByName	 PACKAGE--com.automation.base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param linkName
+	
+	*************************************************************************************/
+	@Override
+	public void clickLinkByName(String linkName) {
+		
+		
+	}
+
+	
+
+	
+
+	
+
+}

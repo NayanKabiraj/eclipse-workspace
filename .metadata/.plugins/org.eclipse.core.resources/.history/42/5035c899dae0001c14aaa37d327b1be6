@@ -1,0 +1,94 @@
+package com.guiautomation.Base;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+
+public class Action extends Page{
+	
+	
+	public Action(WebDriver driver ) {
+		super(driver);
+	}
+
+	 
+	/************************************************************************************
+		* METHOD NAME--getPageTitle	 PACKAGE--com.guiautomation.Base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @return
+	
+	*************************************************************************************/
+	@Override
+	public String getPageTitle() {
+		return driver.getTitle();
+	}
+
+	/************************************************************************************
+		* METHOD NAME--getElement	 PACKAGE--com.guiautomation.Base 
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param locator
+		* @return
+	
+	*************************************************************************************/
+	@Override
+	public WebElement getElement(By locator) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		return driver.findElement(locator);
+	}
+
+	
+	/************************************************************************************
+		* METHOD NAME--waitforElementPresent	 PACKAGE--com.guiautomation.Base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param locator
+	
+	*************************************************************************************/
+	@Override
+	public void waitforElementPresent(By locator) {
+		wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(locator));
+		
+	}
+	
+	/************************************************************************************
+		* METHOD NAME--waitForPageTitle	 PACKAGE--com.guiautomation.Base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param title
+	
+	*************************************************************************************/
+	@Override
+	public void waitForPageTitle(String title) {
+		wait.until(ExpectedConditions.titleContains(title));
+		
+	}
+
+	/************************************************************************************
+		* METHOD NAME--clickLinkByName	 PACKAGE--com.guiautomation.Base
+		* CREATED BY-nkabiraj	 CREATED ON--May 27, 2022
+		* DESCRIPTION--
+		* @param linkName
+	
+	*************************************************************************************/
+	@Override
+	public void clickLinkByName(String linkName) {
+		
+		
+	}
+
+	
+
+	
+
+	
+
+}

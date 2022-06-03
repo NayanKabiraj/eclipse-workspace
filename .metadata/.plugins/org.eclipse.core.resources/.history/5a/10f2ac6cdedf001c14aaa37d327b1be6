@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.automation.extentReportListener;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class ExtentReportListener {
+
+}

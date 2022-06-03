@@ -1,0 +1,527 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "aggregations": {
+          "$id": "#/properties/responseBody/properties/aggregations",
+          "type": "array",
+          "title": "The Aggregations Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/aggregations/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "name": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "categoryTwo"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "docCount": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/docCount",
+                "type": "integer",
+                "title": "The Doccount Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "buckets": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets",
+                "type": "array",
+                "title": "The Buckets Schema",
+                "items": {
+                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items",
+                  "type": "object",
+                  "title": "The Items Schema",                  
+                  "properties": {
+                    "name": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/name",
+                      "type": "string",
+                      "title": "The Name Schema",
+                      "default": "",
+                      "examples": [
+                        "Layout and Measuring Tools"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "docCount": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/docCount",
+                      "type": "integer",
+                      "title": "The Doccount Schema",
+                      "default": 0,
+                      "examples": [
+                        2
+                      ]
+                    },
+                    "subAggregations": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations",
+                      "type": "array",
+                      "title": "The Subaggregations Schema",
+                      "items": {
+                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items",
+                        "type": "object",
+                        "title": "The Items Schema",                        
+                        "properties": {
+                          "name": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/name",
+                            "type": "string",
+                            "title": "The Name Schema",
+                            "default": "",
+                            "examples": [
+                              "categoryThree"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "docCount": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/docCount",
+                            "type": "integer",
+                            "title": "The Doccount Schema",
+                            "default": 0,
+                            "examples": [
+                              1
+                            ]
+                          },
+                          "buckets": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets",
+                            "type": "array",
+                            "title": "The Buckets Schema",
+                            "items": {
+                              "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items",
+                              "type": "object",
+                              "title": "The Items Schema",                             
+                              "properties": {
+                                "name": {
+                                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/name",
+                                  "type": "string",
+                                  "title": "The Name Schema",
+                                  "default": "",
+                                  "examples": [
+                                    "Levels and Accessories"
+                                  ],
+                                  "pattern": "^(.*)$"
+                                },
+                                "docCount": {
+                                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/docCount",
+                                  "type": "integer",
+                                  "title": "The Doccount Schema",
+                                  "default": 0,
+                                  "examples": [
+                                    2
+                                  ]
+                                },
+                                "subAggregations": {
+                                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations",
+                                  "type": "array",
+                                  "title": "The Subaggregations Schema",
+                                  "items": {
+                                    "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items",
+                                    "type": "object",
+                                    "title": "The Items Schema",                                    
+                                    "properties": {
+                                      "name": {
+                                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/name",
+                                        "type": "string",
+                                        "title": "The Name Schema",
+                                        "default": "",
+                                        "examples": [
+                                          "categoryFour"
+                                        ],
+                                        "pattern": "^(.*)$"
+                                      },
+                                      "docCount": {
+                                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/docCount",
+                                        "type": "integer",
+                                        "title": "The Doccount Schema",
+                                        "default": 0,
+                                        "examples": [
+                                          1
+                                        ]
+                                      },
+                                      "buckets": {
+                                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets",
+                                        "type": "array",
+                                        "title": "The Buckets Schema",
+                                        "items": {
+                                          "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items",
+                                          "type": "object",
+                                          "title": "The Items Schema",                                          
+                                          "properties": {
+                                            "name": {
+                                              "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/name",
+                                              "type": "string",
+                                              "title": "The Name Schema",
+                                              "default": "",
+                                              "examples": [
+                                                "Individual Levels"
+                                              ],
+                                              "pattern": "^(.*)$"
+                                            },
+                                            "docCount": {
+                                              "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/subAggregations/items/properties/buckets/items/properties/docCount",
+                                              "type": "integer",
+                                              "title": "The Doccount Schema",
+                                              "default": 0,
+                                              "examples": [
+                                                2
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "data": {
+          "$id": "#/properties/responseBody/properties/data",
+          "type": "array",
+          "title": "The Data Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/data/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "buCode": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/buCode",
+                "type": "string",
+                "title": "The Bucode Schema",
+                "default": "",
+                "examples": [
+                  "SCCHR"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryFour": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryFour",
+                "type": "string",
+                "title": "The Categoryfour Schema",
+                "default": "",
+                "examples": [
+                  "Individual Levels"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryOne": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryOne",
+                "type": "string",
+                "title": "The Categoryone Schema",
+                "default": "",
+                "examples": [
+                  "Tools and Equipment"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryThree": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryThree",
+                "type": "string",
+                "title": "The Categorythree Schema",
+                "default": "",
+                "examples": [
+                  "Levels and Accessories"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "categoryTwo": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/categoryTwo",
+                "type": "string",
+                "title": "The Categorytwo Schema",
+                "default": "",
+                "examples": [
+                  "Layout and Measuring Tools"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerGroupId": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerGroupId",
+                "type": "string",
+                "title": "The Customergroupid Schema",
+                "default": "",
+                "examples": [
+                  "055063143"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "customerName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/customerName",
+                "type": "string",
+                "title": "The Customername Schema",
+                "default": "",
+                "examples": [
+                  "KRU-KEL"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "imageUrl": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/imageUrl",
+                "type": "string",
+                "title": "The Imageurl Schema",
+                "default": "",
+                "examples": [
+                  "https://img4.fastenal.com/productimages/0265735.jpg"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "invoiceQuoteIndicator": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/invoiceQuoteIndicator",
+                "type": "string",
+                "title": "The Invoicequoteindicator Schema",
+                "default": "",
+                "examples": [
+                  "I"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "isLowMargin": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isLowMargin",
+                "type": "boolean",
+                "title": "The Islowmargin Schema",
+                "default": false,
+                "examples": [
+                  false
+                ]
+              },
+              "isStdItem": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/isStdItem",
+                "type": "boolean",
+                "title": "The Isstditem Schema",
+                "default": false,
+                "examples": [
+                  true
+                ]
+              },
+              "lastInvoicedDate": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastInvoicedDate",
+                "type": "string",
+                "title": "The Lastinvoiceddate Schema",
+                "default": "",
+                "examples": [
+                  "2018-07-31"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "lastInvoicedNumber": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastInvoicedNumber",
+                "type": "string",
+                "title": "The Lastinvoicednumber Schema",
+                "default": "",
+                "examples": [
+                  "SCCHR83680"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "lastQtySold": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastQtySold",
+                "type": "integer",
+                "title": "The Lastqtysold Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "lastSalePrice": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/lastSalePrice",
+                "type": "number",
+                "title": "The Lastsaleprice Schema",
+                "default": 0.0,
+                "examples": [
+                  45.05
+                ]
+              },
+              "pkgQuantity": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/pkgQuantity",
+                "type": "integer",
+                "title": "The Pkgquantity Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "publicVendorName": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/publicVendorName",
+                "type": "string",
+                "title": "The Publicvendorname Schema",
+                "default": "",
+                "examples": [
+                  "IRWIN"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "publicVendorSku": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/publicVendorSku",
+                "type": "string",
+                "title": "The Publicvendorsku Schema",
+                "default": "",
+                "examples": [
+                  "1794106"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "salePriceEval": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/salePriceEval",
+                "type": "string",
+                "title": "The Salepriceeval Schema",
+                "default": "",
+                "examples": [
+                  "Good"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "salesChannel": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/salesChannel",
+                "type": "string",
+                "title": "The Saleschannel Schema",
+                "default": "",
+                "examples": [
+                  "F2F"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "sku": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sku",
+                "type": "string",
+                "title": "The Sku Schema",
+                "default": "",
+                "examples": [
+                  "0265735"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "skuDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/skuDescription",
+                "type": "string",
+                "title": "The Skudescription Schema",
+                "default": "",
+                "examples": [
+                  "24\"1550MagI-BeamLevl"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "skuLongDescription": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/skuLongDescription",
+                "type": "string",
+                "title": "The Skulongdescription Schema",
+                "default": "",
+                "examples": [
+                  "24\" 3Vial Aluminum 1550 Series Magnetic I-Beam Level"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "sumOfQtySold": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/sumOfQtySold",
+                "type": "integer",
+                "title": "The Sumofqtysold Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              },
+              "timesInvoiced": {
+                "$id": "#/properties/responseBody/properties/data/items/properties/timesInvoiced",
+                "type": "integer",
+                "title": "The Timesinvoiced Schema",
+                "default": 0,
+                "examples": [
+                  1
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerUsage"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",     
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",          
+          "properties": {
+            "customerGroupId": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerGroupId",
+              "type": "string",
+              "title": "The Customergroupid Schema",
+              "default": "",
+              "examples": [
+                "055063143"
+              ],
+              "pattern": "^(.*)$"
+            },
+            "publicVendorName": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/publicVendorName",
+              "type": "string",
+              "title": "The Publicvendorname Schema",
+              "default": "",
+              "examples": [
+                "IRWIN"
+              ],
+              "pattern": "^(.*)$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

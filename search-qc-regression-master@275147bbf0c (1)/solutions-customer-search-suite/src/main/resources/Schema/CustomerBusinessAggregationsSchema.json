@@ -1,0 +1,185 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "responseHeader",
+    "responseBody",
+    "resultType",
+    "requestBody"
+  ],
+  "properties": {
+    "responseHeader": {
+      "$id": "#/properties/responseHeader",
+      "type": "object",
+      "title": "The Responseheader Schema",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "$id": "#/properties/responseHeader/properties/status",
+          "type": "string",
+          "title": "The Status Schema",
+          "default": "",
+          "examples": [
+            "OK"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "responseBody": {
+      "$id": "#/properties/responseBody",
+      "type": "object",
+      "title": "The Responsebody Schema",      
+      "properties": {
+        "aggregations": {
+          "$id": "#/properties/responseBody/properties/aggregations",
+          "type": "array",
+          "title": "The Aggregations Schema",
+          "items": {
+            "$id": "#/properties/responseBody/properties/aggregations/items",
+            "type": "object",
+            "title": "The Items Schema",            
+            "properties": {
+              "name": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "default": "",
+                "examples": [
+                  "customerAddressId"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "docCount": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/docCount",
+                "type": "integer",
+                "title": "The Doccount Schema",
+                "default": 0,
+                "examples": [
+                  8
+                ]
+              },
+              "buckets": {
+                "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets",
+                "type": "array",
+                "title": "The Buckets Schema",
+                "items": {
+                  "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items",
+                  "type": "object",
+                  "title": "The Items Schema",                  
+                  "properties": {
+                    "name": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/name",
+                      "type": "string",
+                      "title": "The Name Schema",
+                      "default": "",
+                      "examples": [
+                        "2767722"
+                      ],
+                      "pattern": "^(.*)$"
+                    },
+                    "docCount": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/docCount",
+                      "type": "integer",
+                      "title": "The Doccount Schema",
+                      "default": 0,
+                      "examples": [
+                        1484
+                      ]
+                    },
+                    "subAggregations": {
+                      "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations",
+                      "type": "array",
+                      "title": "The Subaggregations Schema",
+                      "items": {
+                        "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items",
+                        "type": "object",
+                        "title": "The Items Schema",                        
+                        "properties": {
+                          "name": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/name",
+                            "type": "string",
+                            "title": "The Name Schema",
+                            "default": "",
+                            "examples": [
+                              "binstockCount"
+                            ],
+                            "pattern": "^(.*)$"
+                          },
+                          "metric": {
+                            "$id": "#/properties/responseBody/properties/aggregations/items/properties/buckets/items/properties/subAggregations/items/properties/metric",
+                            "type": "integer",
+                            "title": "The Metric Schema",
+                            "default": 0,
+                            "examples": [
+                              74
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "resultType": {
+      "$id": "#/properties/resultType",
+      "type": "string",
+      "title": "The Resulttype Schema",
+      "default": "",
+      "examples": [
+        "customerBusinessAggregations"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "requestBody": {
+      "$id": "#/properties/requestBody",
+      "type": "object",
+      "title": "The Requestbody Schema",     
+      "properties": {
+        "parameters": {
+          "$id": "#/properties/requestBody/properties/parameters",
+          "type": "object",
+          "title": "The Parameters Schema",          
+          "properties": {
+            "customerId": {
+              "$id": "#/properties/requestBody/properties/parameters/properties/customerId",
+              "type": "array",
+              "title": "The Customerid Schema",
+              "items": {
+                "$id": "#/properties/requestBody/properties/parameters/properties/customerId/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": [
+                  "GAAT70002",
+                  "GAAT70010",
+                  "CASAM0665"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        },
+        "pageSize": {
+          "$id": "#/properties/requestBody/properties/pageSize",
+          "type": "integer",
+          "title": "The Pagesize Schema",
+          "default": 0,
+          "examples": [
+            0
+          ]
+        }
+      }
+    }
+  }
+}

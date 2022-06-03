@@ -1,0 +1,82 @@
+/**
+ * 
+ */
+package com.automation.base;
+
+import java.util.List;
+
+import org.apache.commons.compress.utils.Lists;
+import org.openqa.selenium.WebDriver;
+import org.testng.asserts.Assertion;
+import org.testng.asserts.IAssert;
+
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class CustomAsserts  extends Assertion{
+	
+	
+	ExtentTest ET;
+	
+	public CustomAsserts() {
+		
+	}
+	
+
+	@Override
+	public void onAssertSuccess(IAssert<?> assertCommand) {
+		System.out.println(assertCommand.getMessage());
+		logExtent(Status.PASS, assertCommand.getMessage());
+		
+	}
+
+	@Override
+	public void onAssertFailure(IAssert<?> assertCommand, AssertionError ex) {
+		// TODO Auto-generated method stub
+		System.out.println(assertCommand.getMessage());
+		logExtent(Status.FAIL, assertCommand.getMessage());
+	}
+
+	@Override
+	public void onBeforeAssert(IAssert<?> assertCommand) {
+		// TODO Auto-generated method stub
+		System.out.println(assertCommand.getMessage());
+	}
+
+	@Override
+	public void onAfterAssert(IAssert<?> assertCommand) {
+		// TODO Auto-generated method stub
+		System.out.println(assertCommand.getMessage());
+	}
+	
+	public void logInfo(String infoMessage) {
+		ExtentReportFactory.getInstance().getExtent().log(Status.INFO, infoMessage);
+	}
+	
+	public void logWarning(String warningMessage) {
+		ExtentReportFactory.getInstance().getExtent().log(Status.WARNING, warningMessage);
+	}
+	
+	private void logExtent(Status status, String message) {
+		ExtentReportFactory.getInstance().getExtent().log(status,message);
+	}
+	
+	private void logExtent(Status status, String actual, String expected,String message) {
+		ExtentReportFactory.getInstance().getExtent().log(status,"ACTUAL : " + actual + " EXPECTED: " + expected + message);
+	}
+
+	public void logPASS(String message) {
+		logExtent(Status.PASS, message);
+	}
+
+	public void logFAIL(String message) {
+		logExtent(Status.FAIL, message);
+	}
+		
+	
+
+}

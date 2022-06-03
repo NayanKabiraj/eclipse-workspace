@@ -1,0 +1,42 @@
+/**
+ * 
+ */
+package com.automation.base;
+
+import org.openqa.selenium.WebDriver;
+
+import com.aventstack.extentreports.ExtentTest;
+
+/**
+ * @author nkabiraj
+ *
+ */
+public class ExtentReportFactory {
+	
+	
+	
+	private ExtentReportFactory() {}
+	
+private static ExtentReportFactory instance= new ExtentReportFactory();
+	
+	public static ExtentReportFactory getInstance() {
+		return instance;
+	}
+
+	ThreadLocal<ExtentTest> extent= new ThreadLocal<ExtentTest>();
+	
+	public ExtentTest getExtent() {
+		return extent.get();
+	}
+	
+	public void setExtent(ExtentTest extentTestObject) {
+		extent.set(extentTestObject); 
+		
+	}
+	public void removeExtentObject() {
+		extent.remove();
+	}
+	
+	
+
+}
